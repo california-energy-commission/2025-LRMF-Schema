@@ -1,0 +1,8 @@
+*.iml
+*.ipr
+*.iws
+*.xpr
+
+# Not used schema files
+schema/LMCI/LMCIELC01E.xsd
+deployed/LMCI/LMCIELC01E.xsd
