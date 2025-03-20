@@ -2892,19 +2892,23 @@ Document Data</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH20cH">LMCIMCH20cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH20dH">LMCIMCH20dH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH20eH">LMCIMCH20eH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIMCH20H">LMCIMCH20H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH21H">LMCIMCH21H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH22aH">LMCIMCH22aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH22bH">LMCIMCH22bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH22cH">LMCIMCH22cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH22dH">LMCIMCH22dH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIMCH22H">LMCIMCH22H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23aH">LMCIMCH23aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23bH">LMCIMCH23bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23cH">LMCIMCH23cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23dH">LMCIMCH23dH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23eH">LMCIMCH23eH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH23fH">LMCIMCH23fH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIMCH23H">LMCIMCH23H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH24aH">LMCIMCH24aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH24bH">LMCIMCH24bH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIMCH24H">LMCIMCH24H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH25aH">LMCIMCH25aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH25bH">LMCIMCH25bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH25cH">LMCIMCH25cH</dtyp:displayterm>
@@ -2913,6 +2917,7 @@ Document Data</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH25H">LMCIMCH25H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH26H">LMCIMCH26H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH27bH">LMCIMCH27bH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIMCH27H">LMCIMCH27H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH28H">LMCIMCH28H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH29H">LMCIMCH29H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIMCH32H">LMCIMCH32H</dtyp:displayterm>
@@ -2935,26 +2940,32 @@ Document Data</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH20cH">LMCVMCH20cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH20dH">LMCVMCH20dH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH20eH">LMCVMCH20eH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH20H">LMCVMCH20H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH21H">LMCVMCH21H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH22aH">LMCVMCH22aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH22bH">LMCVMCH22bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH22cH">LMCVMCH22cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH22dH">LMCVMCH22dH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH22H">LMCVMCH22H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23aH">LMCVMCH23aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23bH">LMCVMCH23bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23cH">LMCVMCH23cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23dH">LMCVMCH23dH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23eH">LMCVMCH23eH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH23fH">LMCVMCH23fH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH23H">LMCVMCH23H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH24aH">LMCVMCH24aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH24bH">LMCVMCH24bH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH24H">LMCVMCH24H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH25aH">LMCVMCH25aH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH25bH">LMCVMCH25bH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH25cH">LMCVMCH25cH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH25dH">LMCVMCH25dH</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH25eH">LMCVMCH25eH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH25H">LMCVMCH25H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH26H">LMCVMCH26H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH27bH">LMCVMCH27bH</dtyp:displayterm>
+            <dtyp:displayterm value="LMCVMCH27H">LMCVMCH27H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH28H">LMCVMCH28H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH29H">LMCVMCH29H</dtyp:displayterm>
             <dtyp:displayterm value="LMCVMCH32H">LMCVMCH32H</dtyp:displayterm>
@@ -2966,10 +2977,13 @@ Document Data</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH04cH">NRCVMCH04cH</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH04dH">NRCVMCH04dH</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH04eH">NRCVMCH04eH</dtyp:displayterm>
+            <dtyp:displayterm value="NRCVMCH04H">NRCVMCH04H</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH24aH">NRCVMCH24aH</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH24bH">NRCVMCH24bH</dtyp:displayterm>
+            <dtyp:displayterm value="NRCVMCH24H">NRCVMCH24H</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH27bH">NRCVMCH27bH</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH27cH">NRCVMCH27cH</dtyp:displayterm>
+            <dtyp:displayterm value="NRCVMCH27H">NRCVMCH27H</dtyp:displayterm>
             <dtyp:displayterm value="NRCVMCH32H">NRCVMCH32H</dtyp:displayterm>
             <dtyp:displayterm value="NRCVPLB21H">NRCVPLB21H</dtyp:displayterm>
             <dtyp:displayterm value="NRCVPLB22H">NRCVPLB22H</dtyp:displayterm>
@@ -3149,6 +3163,7 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="LMCIENV01E"/>
          <xsd:enumeration value="LMCIENV20aH"/>
          <xsd:enumeration value="LMCIENV20bH"/>
+         <xsd:enumeration value="LMCIENV20H"/>
          <xsd:enumeration value="LMCIENV21H"/>
          <xsd:enumeration value="LMCIENV22H"/>
          <xsd:enumeration value="LMCILTG01E"/>
@@ -3166,19 +3181,23 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="LMCIMCH20cH"/>
          <xsd:enumeration value="LMCIMCH20dH"/>
          <xsd:enumeration value="LMCIMCH20eH"/>
+         <xsd:enumeration value="LMCIMCH20H"/>
          <xsd:enumeration value="LMCIMCH21H"/>
          <xsd:enumeration value="LMCIMCH22aH"/>
          <xsd:enumeration value="LMCIMCH22bH"/>
          <xsd:enumeration value="LMCIMCH22cH"/>
          <xsd:enumeration value="LMCIMCH22dH"/>
+         <xsd:enumeration value="LMCIMCH22H"/>
          <xsd:enumeration value="LMCIMCH23aH"/>
          <xsd:enumeration value="LMCIMCH23bH"/>
          <xsd:enumeration value="LMCIMCH23cH"/>
          <xsd:enumeration value="LMCIMCH23dH"/>
          <xsd:enumeration value="LMCIMCH23eH"/>
          <xsd:enumeration value="LMCIMCH23fH"/>
+         <xsd:enumeration value="LMCIMCH23H"/>
          <xsd:enumeration value="LMCIMCH24aH"/>
          <xsd:enumeration value="LMCIMCH24bH"/>
+         <xsd:enumeration value="LMCIMCH24H"/>
          <xsd:enumeration value="LMCIMCH25aH"/>
          <xsd:enumeration value="LMCIMCH25bH"/>
          <xsd:enumeration value="LMCIMCH25cH"/>
@@ -3187,6 +3206,7 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="LMCIMCH25H"/>
          <xsd:enumeration value="LMCIMCH26H"/>
          <xsd:enumeration value="LMCIMCH27bH"/>
+         <xsd:enumeration value="LMCIMCH27H"/>
          <xsd:enumeration value="LMCIMCH28H"/>
          <xsd:enumeration value="LMCIMCH29H"/>
          <xsd:enumeration value="LMCIMCH32H"/>
@@ -3201,6 +3221,7 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="LMCISAB01E"/>
          <xsd:enumeration value="LMCVENV20aH"/>
          <xsd:enumeration value="LMCVENV20bH"/>
+         <xsd:enumeration value="LMCVENV20H"/>
          <xsd:enumeration value="LMCVENV21H"/>
          <xsd:enumeration value="LMCVENV22H"/>
          <xsd:enumeration value="LMCVEXC20H"/>
@@ -3209,26 +3230,32 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="LMCVMCH20cH"/>
          <xsd:enumeration value="LMCVMCH20dH"/>
          <xsd:enumeration value="LMCVMCH20eH"/>
+         <xsd:enumeration value="LMCVMCH20H"/>
          <xsd:enumeration value="LMCVMCH21H"/>
          <xsd:enumeration value="LMCVMCH22aH"/>
          <xsd:enumeration value="LMCVMCH22bH"/>
          <xsd:enumeration value="LMCVMCH22cH"/>
          <xsd:enumeration value="LMCVMCH22dH"/>
+         <xsd:enumeration value="LMCVMCH22H"/>
          <xsd:enumeration value="LMCVMCH23aH"/>
          <xsd:enumeration value="LMCVMCH23bH"/>
          <xsd:enumeration value="LMCVMCH23cH"/>
          <xsd:enumeration value="LMCVMCH23dH"/>
          <xsd:enumeration value="LMCVMCH23eH"/>
          <xsd:enumeration value="LMCVMCH23fH"/>
+         <xsd:enumeration value="LMCVMCH23H"/>
          <xsd:enumeration value="LMCVMCH24aH"/>
          <xsd:enumeration value="LMCVMCH24bH"/>
+         <xsd:enumeration value="LMCVMCH24H"/>
          <xsd:enumeration value="LMCVMCH25aH"/>
          <xsd:enumeration value="LMCVMCH25bH"/>
          <xsd:enumeration value="LMCVMCH25cH"/>
          <xsd:enumeration value="LMCVMCH25dH"/>
          <xsd:enumeration value="LMCVMCH25eH"/>
+         <xsd:enumeration value="LMCVMCH25H"/>
          <xsd:enumeration value="LMCVMCH26H"/>
          <xsd:enumeration value="LMCVMCH27bH"/>
+         <xsd:enumeration value="LMCVMCH27H"/>
          <xsd:enumeration value="LMCVMCH28H"/>
          <xsd:enumeration value="LMCVMCH29H"/>
          <xsd:enumeration value="LMCVMCH32H"/>
@@ -3240,10 +3267,13 @@ Document Data</dtyp:displayterm>
          <xsd:enumeration value="NRCVMCH04cH"/>
          <xsd:enumeration value="NRCVMCH04dH"/>
          <xsd:enumeration value="NRCVMCH04eH"/>
+         <xsd:enumeration value="NRCVMCH04H"/>
          <xsd:enumeration value="NRCVMCH24aH"/>
          <xsd:enumeration value="NRCVMCH24bH"/>
+         <xsd:enumeration value="NRCVMCH24H"/>
          <xsd:enumeration value="NRCVMCH27bH"/>
          <xsd:enumeration value="NRCVMCH27cH"/>
+         <xsd:enumeration value="NRCVMCH27H"/>
          <xsd:enumeration value="NRCVMCH32H"/>
          <xsd:enumeration value="NRCVPLB21H"/>
          <xsd:enumeration value="NRCVPLB22H"/>
@@ -8460,12 +8490,14 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
             <dtyp:displayterm value="FactoryInstalledFID">This system has a factory installed FID</dtyp:displayterm>
             <dtyp:displayterm value="FieldInstalledFID">This system has a field installed FID</dtyp:displayterm>
             <dtyp:displayterm value="NoInstalledFID">This system does not have a FID device installed</dtyp:displayterm>
+            <dtyp:displayterm value="FIDStatusNA">N/A</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="FactoryInstalledFID"/>
          <xsd:enumeration value="FieldInstalledFID"/>
          <xsd:enumeration value="NoInstalledFID"/>
+         <xsd:enumeration value="FIDStatusNA"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="FenestrationComplianceCalc">
@@ -12182,10 +12214,12 @@ Builders, Manufacturers, And Suppliers</xsd:documentation>
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="RequiredVerificationTable150BC">Verification of Table 150.0-B or C Alternative Return Duct Design Criteria is Required</dtyp:displayterm>
+            <dtyp:displayterm value="MinimumAirflowRateNA">N/A</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="RequiredVerificationTable150BC"/>
+         <xsd:enumeration value="MinimumAirflowRateNA"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="MinimumAirflowRateRequired">
@@ -14924,13 +14958,13 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
    <xsd:simpleType name="RefrigerantChargeVerificationMessage">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="HERS_VerificationNotRequired">HERS verification of refrigerant charge is not required</dtyp:displayterm>
+            <dtyp:displayterm value="VerificationNotRequired">Verification of refrigerant charge is not required</dtyp:displayterm>
             <dtyp:displayterm value="DoesNotQualifyForGroupSampling">System does not qualify for group sampling</dtyp:displayterm>
             <dtyp:displayterm value="QualifiesForGroupSampling">System qualifies for group sampling</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
-         <xsd:enumeration value="HERS_VerificationNotRequired"/>
+         <xsd:enumeration value="VerificationNotRequired"/>
          <xsd:enumeration value="DoesNotQualifyForGroupSampling"/>
          <xsd:enumeration value="QualifiesForGroupSampling"/>
       </xsd:restriction>
@@ -14942,7 +14976,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="Subcooling">Subcooling (outdoor temperature must be equal to or greater than 55 degF)</dtyp:displayterm>
             <dtyp:displayterm value="Superheat">Superheat (outdoor temperature must be equal to or greater than 55 degF)</dtyp:displayterm>
             <dtyp:displayterm value="WeighIn">Weigh-in with Installer independent</dtyp:displayterm>
-            <dtyp:displayterm value="WeighInHERS">Weigh-in with HERS Rater Observation</dtyp:displayterm>
+            <dtyp:displayterm value="WeighInObservation">Weigh-in with ECC Rater Observation</dtyp:displayterm>
             <dtyp:displayterm value="WinterSetup">Winter setup (applicable when outdoor temperature is less than 55 degF)</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
@@ -14951,28 +14985,28 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="Subcooling"/>
          <xsd:enumeration value="Superheat"/>
          <xsd:enumeration value="WeighIn"/>
-         <xsd:enumeration value="WeighInHERS"/>
+         <xsd:enumeration value="WeighInObservation"/>
          <xsd:enumeration value="WinterSetup"/>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:simpleType name="RefrigerantChargeVerificationMethodHERS">
+   <xsd:simpleType name="RefrigerantChargeVerificationMethodECC">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="FID_Verification">FID verification</dtyp:displayterm>
-            <dtyp:displayterm value="NoTestRequiredHERS">No HERS test required</dtyp:displayterm>
-            <dtyp:displayterm value="SubcoolingHERS">Subcooling</dtyp:displayterm>
-            <dtyp:displayterm value="SuperheatHERS">Superheat</dtyp:displayterm>
+            <dtyp:displayterm value="NoVerificationTestRequired">No Verification test required</dtyp:displayterm>
+            <dtyp:displayterm value="SubcoolingVerification">Subcooling</dtyp:displayterm>
+            <dtyp:displayterm value="SuperheatVerification">Superheat</dtyp:displayterm>
             <dtyp:displayterm value="WeighInObservation">Weigh-In Observation</dtyp:displayterm>
-            <dtyp:displayterm value="WinterSetupHERS">Winter Setup</dtyp:displayterm>
+            <dtyp:displayterm value="WinterSetupVerification">Winter Setup</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="FID_Verification"/>
-         <xsd:enumeration value="NoTestRequiredHERS"/>
-         <xsd:enumeration value="SubcoolingHERS"/>
-         <xsd:enumeration value="SuperheatHERS"/>
+         <xsd:enumeration value="NoVerificationTestRequired"/>
+         <xsd:enumeration value="SubcoolingVerification"/>
+         <xsd:enumeration value="SuperheatVerification"/>
          <xsd:enumeration value="WeighInObservation"/>
-         <xsd:enumeration value="WinterSetupHERS"/>
+         <xsd:enumeration value="WinterSetupVerification"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RefrigerantChargeVerificationRequired">
@@ -14996,12 +15030,12 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
    <xsd:simpleType name="RefrigerantChargeVerifier">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
-            <dtyp:displayterm value="HERS_Rater">HERS rater</dtyp:displayterm>
+            <dtyp:displayterm value="FieldVerifier">ECC rater</dtyp:displayterm>
             <dtyp:displayterm value="Installer">HVAC system installer</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
-         <xsd:enumeration value="HERS_Rater"/>
+         <xsd:enumeration value="FieldVerifier"/>
          <xsd:enumeration value="Installer"/>
       </xsd:restriction>
    </xsd:simpleType>
@@ -15055,12 +15089,14 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="Other">Other</dtyp:displayterm>
             <dtyp:displayterm value="R22">R-22</dtyp:displayterm>
             <dtyp:displayterm value="R410A">R-410A</dtyp:displayterm>
+            <dtyp:displayterm value="R454B">R-454B</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="Other"/>
          <xsd:enumeration value="R22"/>
          <xsd:enumeration value="R410A"/>
+         <xsd:enumeration value="R454B"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="RefrigerantTypeOther">
