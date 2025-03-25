@@ -66,7 +66,7 @@
                   <xsd:element name="A_BeforeNote1" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Before Section Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Title 24, Part 6, Section 160.2(b) 2 [d:b]Ventilation and Indoor Air Quality for Attached Dwelling Units.[/d:b] All dwelling units shall meet the requirements of ANSI/ASHRAE Standard 62.2.-2019 Ventilation and Acceptable Indoor Air Quality in Residential Buildings subject to amendments specified by Title 24, Part 6 Section 160.2(b) 2.</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Title 24, Part 6, Section 160.2(b) 2 [d:b]Ventilation and Indoor Air Quality for Attached Dwelling Units.[/d:b] All dwelling units shall meet the requirements of ANSI/ASHRAE Standard 62.2.-2022 Ventilation and Acceptable Indoor Air Quality in Residential Buildings subject to amendments specified by Title 24, Part 6 Section 160.2(b) 2.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A01_DwellingUnitName" type="com:DwellingUnitName" >
@@ -161,7 +161,13 @@ End If</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
                   </xsd:choice>
-                  <xsd:element name="A07After" minOccurs="0">
+                  <xsd:element name="A08_FaultIndicatorDisplayStatus" type="comp:FaultIndicatorDisplayStatus" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Fault Indicator Display (FID) Status </xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">auto filled from LMCI; Possible values: FactoryInstalledFID display text: This system has a factory installed FID,   FieldInstalledFID display text: This system has a field installed FID; NoInstalledFID display text: This system does not have a FID device installed.  If installed system doesn't match value from CF2R, it can be overwritten by rater but it will be flagged as a possible fail</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="A08After" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Mch-27b Variant</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">MCH-27b - Multiamily Ventilation</xsd:documentation>
@@ -277,7 +283,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_C2" minOccurs="0">
+         <xsd:element name="Section_D" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">HRV or ERV Serving Individual Dwelling Unit</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required If A06_VentilationSystemType == BalancedERV Or  BalancedHRV</xsd:documentation>
@@ -288,9 +294,8 @@ End If</xsd:documentation>
                   <xsd:element name="HErvBeginNote1" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Heat or Energy Recovery Systems must have a fan efficacy of [d:lte/] 1.0 W/cfm in all climate zones (Section 160.2(b)2Biii)
-
-Heat or Energy Recovery Systems must prescriptively have a fan efficacy of [d:lte/] 0.6 W/cfm and a minimum sensible heat recovery of 67% in climate zones 1,2 and 11-16 (Section 170.2(c)3Biva)</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Heat or Energy Recovery Systems must have a fan efficacy of [d:lte/] 1.0 W/cfm in all climate zones (Section 160.2(b)2Biii)[d:line1/]
+Heat or Energy Recovery Systems must prescriptively have a fan efficacy of [d:lte/] 0.6 W/cfm and a minimum sensible heat recovery of 67% in climate zones 1,2, 4, 11-14 and 16 (Section 170.2(c)3Biva)</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="TableHrvErv" >
@@ -318,7 +323,7 @@ Heat or Energy Recovery Systems must prescriptively have a fan efficacy of [d:lt
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Fan Efficacy Performance Rating (W/CFM)</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">User input 
-If parent is LMCC-MCH And A09_ClimateZone == 1 Or 2 Or InRange(11,16)
+If parent is LMCC-MCH And A09_ClimateZone == 1 Or 2 or 4 Or InRange(11,14) or 16
 check that result LTE 0.6
 Else
 check that result LTE 1.0
@@ -329,7 +334,7 @@ End If</xsd:documentation>
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Sensible Recovery Efficiency (%)</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">User input
-If parent is LMCC-MCH And A09_ClimateZone == 1 Or 2 Or InRange(11,16)
+If parent is LMCC-MCH And A09_ClimateZone == 1 Or 2 Or 4 Or InRange(11,14) or 16
 check that result GTE 67%
 End If</xsd:documentation>
                                        </xsd:annotation>
@@ -343,7 +348,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_D" minOccurs="0">
+         <xsd:element name="Section_E" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Additional Envelope Requirements</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required if A06_VentilationSystemType  == SupplyVent , ExhaustVent, CentralFanIntegrated, SupplyCentralVent Or ExhaustCentralVent</xsd:documentation>
@@ -351,7 +356,7 @@ End If</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="D01_AirLeakageRateMeasuredCFM50" type="comp:AirLeakageRateMeasuredCFM50" >
+                  <xsd:element name="E01_AirLeakageRateMeasuredCFM50" type="comp:AirLeakageRateMeasuredCFM50" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Envelope Leakage</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field: Reference data from LMCI-MCH-24 AirLeakageRateMeasuredCFM50</xsd:documentation>
@@ -360,7 +365,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_E" minOccurs="0">
+         <xsd:element name="Section_F" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Additional Central Ventilation System Balancing Requirements</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required if A06_VentilationSystemType  == SupplyCentralVent, ExhaustCentralVent Or BalancedCentralVent</xsd:documentation>
@@ -368,7 +373,7 @@ End If</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="E01_MaximumAirflowRate" type="comp:MaximumAirflowRate" >
+                  <xsd:element name="F01_MaximumAirflowRate" type="comp:MaximumAirflowRate" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Maximum Ventilation Flow (CFM)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field: result = B01_MinimumAirflowRateRequired x 1.20</xsd:documentation>
@@ -377,14 +382,67 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_F" minOccurs="1">
+         <xsd:element name="Section_G" minOccurs="0">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">Fault Indicator Display Installation Verification</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">The section is required if If FaultIndicatorDisplayStatus in section A equals FactoryInstalledFID or FieldInstalledFID.</xsd:documentation>
+               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="G_BeginNote1" minOccurs="0">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Procedures for the Fault Indicator Display Verification are detailed in Appendix JA17.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G01_FID_ManufacturerNameMake" type="comp:FID_ManufacturerNameMake" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">FID Manufacturer Name/Make</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">auto-filled from LMCI.  If installed system does not match the value from the LMCI value, it can be overwritten by rater but it will be flagged as a possible fail</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G02_FID_ModelNumber" type="comp:FID_ModelNumber" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">FID Model Number</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">auto-filled from LMCI.  If installed system does not match the value from the LMCI value, it can be overwritten by rater but it will be flagged as a possible fail</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G03_IsFID_MountedAdjacentThermostat" type="comp:IsFID_MountedAdjacentThermostat" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">The display module is mounted adjacent to the system thermostat</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User selects Yes or No; </xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G04_DoesFID_MeetJA6Requirements" type="comp:DoesFID_MeetJA6Requirements" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">The manufacturer has certified to the Energy Commission that the FID model meets the requirements of Reference Joint Appendix JA17 (Make and model found on CEC list of approved FID devices)</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User selects Yes or No; </xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G05_DoesFID_ReportOperationWithinAcceptableParameters" type="comp:DoesFID_ReportOperationWithinAcceptableParameters" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">The system has operated for at least 15 minutes and the FID reports that the system is operating within acceptable parameters.</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User selects Yes or No; </xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="G06_IsFID_Compliant" type="comp:IsFID_Compliant" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Compliance Statement:</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">If IsFID_MountedAdjacentThermostat is true and DoesFID_MeetJA6Requirements is true and DoesFID_ReportOperationWithinAcceptableParameters is true then result is true.  For Boolean true value display text: FID complies.  Else result is false.  For Boolean false value display text: FID does NOT comply.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="Section_H" minOccurs="1">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Compliance Statement</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="F01_MechanicalVentilationCompliance" type="comp:MechanicalVentilationCompliance" >
+                  <xsd:element name="H01_MechanicalVentilationCompliance" type="comp:MechanicalVentilationCompliance" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field: 
@@ -394,13 +452,13 @@ result = BuildingPasses display term Building Passes ;
 Else If  A06_VentilationSystemType == Balanced, BalancedERV Or  BalancedHRV  And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired 
 result = BuildingPassesRateTest display term Building Passes Mechanical Ventilation RateTest; 
  
-Else If  A06_VentilationSystemType == BalancedCentralVent And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And C06_TotalContinuousAirflowRateInstalled LTE E01_MaximumAirflowRate 
+Else If  A06_VentilationSystemType == BalancedCentralVent And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And C06_TotalContinuousAirflowRateInstalled LTE F01_MaximumAirflowRate 
 result = BuildingPassesRateTest display term Building Passes Mechanical Ventilation RateTest; 
  
-Else If  A06_VentilationSystemType == SupplyVent, ExhaustVent, CentralFanIntegrated And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And D01_AirLeakageRateMeasuredCFM50 LTE LMCI-Mch24 CompartmentalizationLeakageTargetCFM50 
+Else If  A06_VentilationSystemType == SupplyVent, ExhaustVent, CentralFanIntegrated And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And E01_AirLeakageRateMeasuredCFM50 LTE LMCI-Mch24 CompartmentalizationLeakageTargetCFM50 
 result = BuildingPassesRateTest display term Building Passes Mechanical Ventilation RateTest; 
  
-Else If  A06_VentilationSystemType == SupplyCentralVent Or ExhaustCentralVent And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And D01_AirLeakageRateMeasuredCFM50 LTE LMCI-Mch24 CompartmentalizationLeakageTargetCFM50 And C06_TotalContinuousAirflowRateInstalled LTE E01_MaximumAirflowRate 
+Else If  A06_VentilationSystemType == SupplyCentralVent Or ExhaustCentralVent And C06_TotalContinuousAirflowRateInstalled GTE B01_MinimumAirflowRateRequired And E01_AirLeakageRateMeasuredCFM50 LTE LMCI-Mch24 CompartmentalizationLeakageTargetCFM50 And C06_TotalContinuousAirflowRateInstalled LTE F01_MaximumAirflowRate 
 result = BuildingPassesRateTest display term Building Passes Mechanical Ventilation RateTest; 
  
 Else result = BuildingFailsRateTest display term Building Fails Mechanical Ventilation RateTest
@@ -410,23 +468,23 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_G" minOccurs="1" maxOccurs="1">
+         <xsd:element name="Section_J" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Determination of HERS Verification Compliance</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="G_BeginNote1" minOccurs="0">
+                  <xsd:element name="J_BeginNote1" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">All applicable sections of this document shall indicate compliance with the specified verification protocol requirements in order for this Certificate of Verification as a whole to be determined to be in compliance.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="G01_DoesLMCV_Pass" type="comp:DoesLMCV_Pass" >
+                  <xsd:element name="J01_DoesLMCV_Pass" type="comp:DoesLMCV_Pass" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">If F01_MechanicalVentilationCompliance == BuildingPassesRateTest  result =  true  display term Complies: All specified verification protocol requirements on this document are met. Else result = false display term: Does not comply: One or more specified verification protocol requirements on this document are not met.</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">If H01_MechanicalVentilationCompliance == BuildingPassesRateTest  result =  true  display term Complies: All specified verification protocol requirements on this document are met. Else result = false display term: Does not comply: One or more specified verification protocol requirements on this document are not met.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
