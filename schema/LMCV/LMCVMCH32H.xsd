@@ -263,7 +263,7 @@ End If</xsd:documentation>
                                              <xsd:documentation source="FieldText">Required Minimum Ventilation Rate (if demand controlled)</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Calculated field (results are in CFM): 
                                                 
-                                                if B09a = Capture Efficiency, then result = NA – See Table C2; 
+                                                if B09a = Capture Efficiency, then result = NA – See Table D; 
                                                 Elseif B09a = Airflow, then calculate the following as default:
                                                 If the following three conditions are met: (1) B08=Demand Control, (2) B03=Vent Range Hood, and (3) A08=Electric, AND
                                                 If A07 GT 1500, then result = 110;
@@ -460,7 +460,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_C2" minOccurs="0">
+         <xsd:element name="Section_D" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Kitchen Range Hood Capture Efficiency Option</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required If B09a_HoodExhaustComplianceMethod == CaptureEfficiency</xsd:documentation>
@@ -533,9 +533,9 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_D" minOccurs="1">
+         <xsd:element name="Section_E" minOccurs="1">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Determination of HERS Verification Compliance</xsd:documentation>
+               <xsd:documentation source="FieldText">Determination of ECC Verification Compliance</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>

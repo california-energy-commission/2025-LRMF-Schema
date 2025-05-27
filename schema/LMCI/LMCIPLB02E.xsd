@@ -207,7 +207,7 @@ InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectri
                                              If performance then allowed values are
                                              *Standard Distribution System
                                              * Point of Use
-                                             * Parallel Piping 
+                                             * Central Parallel Piping 
                                              * Recirculation System Non-Demand Control
                                              * Demand Recirculation Manual Control 
                                              * Demand Recirculation Sensor Control; 
@@ -342,7 +342,7 @@ This  section is required if the parent CC  has any HPWH systems, Require one ro
                                                 If performance Allowed values are
                                                 *Standard Distribution System
                                                 * Point of Use
-                                                * Parallel Piping 
+                                                * Central Parallel Piping 
                                                 *Recirculation System Non-Demand Control
                                                 * Demand Recirculation Manual Control 
                                                 * Demand Recirculation Sensor Control; 
@@ -633,6 +633,14 @@ Require one row of data for each  water heater identified in TableHpwhd</xsd:doc
                                                 <xsd:complexType>
                                                    <xsd:sequence>
                                                       <xsd:choice maxOccurs="1">
+                                                         <xsd:element name="B2hp03_AOSmithHPTS40SimulationGroup" type="hvac:AOSmithHPTS40SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  AOSmithHPTS40,  list = AOSmithHPTS40SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_AOSmithHPTS50SimulationGroup" type="hvac:AOSmithHPTS50SimulationGroup" >
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -729,6 +737,30 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BWC202065 list = BWC202065Simul
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H50SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H50SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H50 list = BradfordWhiteAeroThermRE2H50SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H65SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H65SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H65 list = BradfordWhiteAeroThermRE2H65SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H80SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H80SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H80 list = BradfordWhiteAeroThermRE2H80SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_GE201450SimulationGroup" type="hvac:GE201450SimulationGroup" >
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -742,6 +774,22 @@ End If</xsd:documentation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
 If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  GE201480 list = GE201480SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_LG_APHWC50SimulationGroup" type="hvac:LG_APHWC50SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup == LG_APHWC50 list = LG_APHWC50SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_LG_APHWC80SimulationGroup" type="hvac:LG_APHWC80SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup == LG_APHWC80 list = LG_APHWC80SimulationGroup values;
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
@@ -921,6 +969,30 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Sanden40 list = Sanden40Simula
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="B2hp03_SANCO240SimulationGroup" type="hvac:SANCO240SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   SANCO240 list = SANCO240SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_SANCO280SimulationGroup" type="hvac:SANCO280SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   SANCO280 list = SANCO280SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_SANCO2120SimulationGroup" type="hvac:SANCO2120SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   SANCO2120 list = SANCO2120SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_Sanden80SimulationGroup" type="hvac:Sanden80SimulationGroup" >
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -966,6 +1038,38 @@ End If</xsd:documentation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
 If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier3Generic80 list = Tier3Generic80  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic40" type="hvac:Tier4Generic40" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic40 list = Tier4Generic40  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic50" type="hvac:Tier4Generic50" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic50 list = Tier4Generic50  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic65" type="hvac:Tier4Generic65" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  Tier4Generic65 list = Tier4Generic65  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic80" type="hvac:Tier4Generic80" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic80 list = Tier4Generic80  values.
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
@@ -1534,7 +1638,7 @@ Check:  If result != C06 flag as non-compliant and do not allow doc to be regist
          </xsd:element>
          <xsd:element name="Section_F" minOccurs="1">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Mandatory Measures for all Domestic Hot Water Distribution Systems</xsd:documentation>
+               <xsd:documentation source="FieldText">Mandatory Measures for Single Dwelling Systems</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
@@ -1548,19 +1652,34 @@ Check:  If result != C06 flag as non-compliant and do not allow doc to be regist
                   <xsd:element name="F02" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Unfired storage tanks are insulated with an external R-3.5 or combination of R-16 internal and external Insulation. (Section 110.3(c)4).</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Unfired storage tanks are insulated with an external R-3.5 or combination of R-16 internal and external Insulation. (Section 110.3(c)3).</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="F03" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">All domestic hot water pipes shall be insulated as specified in Section 609.11 of the California Plumbing Code.  [d:l t="*"][d:list] Insulation buried below grade must be installed in a waterproof and non-crushable casing or sleeve. [/d:list][d:list]Piping that penetrates framing members shall not be required to have pipe insulation for the distance of the framing penetration.[/d:list][d:list] Piping that penetrates metal framing shall use grommets, plugs, wrapping or other insulating material to assure that no contact is made with the metal framing. Insulation shall butt securely against all framing members.[/d:list][d:list] Piping installed in interior or exterior walls that is surrounded on all sides by at least 1 inch (2.5 cm) of insulation. [/d:list][d:list] Piping installed in crawl space with a minimum of 1 inch (2.5 cm) of crawl space insulation above and below. [/d:list][d:list]Piping installed in attics with a minimum of 4 inches (10 cm) of attic insulation on top [/d:list][d:list]Piping insulation shall fit tightly, and all elbows and tees shall be fully insulated. [/d:list][/d:l]</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">All domestic hot water pipes shall be insulated as specified in Section 609.12 of the California Plumbing Code.  [d:l t="*"][d:list] Insulation buried below grade must be installed in a waterproof and non-crushable casing or sleeve. [/d:list][d:list]Piping that penetrates framing members shall not be required to have pipe insulation for the distance of the framing penetration.[/d:list][d:list] Piping that penetrates metal framing shall use grommets, plugs, wrapping or other insulating material to assure that no contact is made with the metal framing. Insulation shall butt securely against all framing members.[/d:list][d:list] Piping installed in interior or exterior walls that is surrounded on all sides by at least 1 inch (2.5 cm) of insulation. [/d:list][d:list] Piping installed in crawl space with a minimum of 1 inch (2.5 cm) of crawl space insulation above and below. [/d:list][d:list]Piping installed in attics with a minimum of 4 inches (10 cm) of attic insulation on top [/d:list][d:list]Piping insulation shall fit tightly, and all elbows and tees shall be fully insulated. [/d:list][/d:l]</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="F04" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">For Gas or Propane Water Heaters: Ensure either a or b are installed (Section 150.0(n)) [d:line1/][d:tab1/]a) A designated space at least 2.5 feet by 2.5 feet and 7 feet tall within 3 feet from the water heater  [d:l t="#"][d:list]A dedicated 120V, 20A electrical receptacle connected to the electrical panel with a 120/240V 3 conductor, 10AWG copper branch circuit, within 3 feet from the water heater and accessible with no obstructions [/d:list][d:list]The conductor shall be labeled with the word "Spare" on both ends; and [/d:list][d:list] A reserved single pole circuit breaker space next to the circuit breaker next to the branch circuit  labeled "Future" 240V shall be provided. [/d:list][d:list]A condensate drain no more than 2 inches higher than the base on water heater for natural draining[/d:list][/d:l]  [d:line1/][d:tab1/]b) A designated space at least 2.5 feet by 2.5 feet and 7 feet tall within 3 feet from the water heater  [d:l t="#"][d:list]A dedicated 240 volt branch circuit shall be installed within 3 feet from the designated space.  The branch circuit shall be rated at 30 amps minimum.  The blank cover shall be identified as "240V ready"; and [/d:list][d:list]The main electrical service panel shall have a reserved space to allow for the installation of a double pole circuit breaker for a future HPWH installation.  The reserved space shall be permanently marked as "For Future 240V use"; and [/d:list][d:list]Either a dedicated cold water supply, or the cold water supply shall pass through the designated HPWH location just before reaching the gas or propane water heater; and [/d:list][d:list] The hot water supply pipe coming out of the gas or propane water heater shall be routed first through the designated HPWH location before serving any fixtures; and [/d:list][d:list]The hot and cold water piping at the designated HPWH location shall be exposed and readily accessible for future installation of a HPWH; and [/d:list][d:list]A condensate drain no more than 2 inches higher than the base of the installed water heater, and allows natural draining without pump assistance. [/d:list][/d:l]</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">For Gas or Propane Water Heaters: Ensure either a or b are installed (Section 150.0(n)) [d:line1/][d:tab1/]a) A designated space at least 2.5 feet by 2.5 feet and 7 feet tall within 3 feet from the water heater  [d:l t="#"][d:list]A dedicated 120V, 20A electrical receptacle connected to the electrical panel with a 120/240V 3 conductor, 10AWG copper branch circuit, within 3 feet from the water heater and accessible with no obstructions [/d:list]
+[d:list]The conductor shall be labeled with the word "Spare" on both ends; and [/d:list][d:list] A reserved single pole circuit breaker space next to the circuit breaker next to the branch circuit  labeled "Future 240V use" shall be provided. [/d:list][d:list]A condensate drain no more than 2 inches higher than the base of the water heater, and allows for natural draining without pump assistance.[/d:list][/d:l]  [d:line1/][d:tab1/]b) A designated space at least 2.5 feet by 2.5 feet and 7 feet tall within 3 feet from the water heater  
+[d:l t="#"][d:list]A dedicated 240 volt branch circuit shall be installed within 3 feet from the designated space.  The branch circuit shall be rated at 30 amps minimum.  The blank cover shall be identified as "240V ready"; and [/d:list][d:list]The main electrical service panel shall have a reserved space to allow for the installation of a double pole circuit breaker for a future HPWH installation.  The reserved space shall be permanently marked as "For Future 240V use"; and [/d:list][d:list]Either a dedicated cold water supply, or the cold water supply shall pass through the designated HPWH location just before reaching the gas or propane water heater; and [/d:list][d:list] The hot water supply pipe coming out of the gas or propane water heater shall be routed first through the designated HPWH location before serving any fixtures; and [/d:list][d:list]The hot and cold water piping at the designated HPWH location shall be exposed and readily accessible for future installation of a HPWH; and [/d:list][d:list]A condensate drain no more than 2 inches higher than the base of the water heater, and allows natural draining without pump assistance. [/d:list][/d:l]</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="F05" minOccurs="0">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText"></xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">[d:b]Domestic hot water piping insulation requirements[/d:b]: See the Exceptions to Section 160.4(e)): [d:line1/] [d:b]1. General Requirements[/d:b]:[d:l t="a"][d:list]The first 8 feet of inlet cold water piping from the storage tankis, including piping between a storage tank and a heat trap shall be insulated. [/d:list] 
+[d:list] Insulation on the piping and domestic hot water system appurtenances shall be continuous. [/d:list][d:list] Pipe supports, hangers, and pipe clamps shall be attached on the outside of rigid pipe insulation to prevent thermal bridges. [/d:list][d:list] All pipe insulation seams shall be sealed. [/d:list] [d:list] Insulation for pipe elbows shall be mitered, preformed, or site fabricated with PVC covers.  [/d:list] [d:list] Insulation for tees shall be notched, preformed, or site fabricated with PVC covers.[/d:list] [d:list] Extended stem isolation valves shall be installed.
+[/d:list][d:list]All plumbing appurtenances on hot water piping from a heating source to heating plant, at the heating plant, and distribution supply and return piping shall be insulated to meet the following requirements: [d:line1/][d:tab1/]i. Where the outer diameter of the appurtenance is less than the outer diameter of the insulated pipe that it is attached to, the appurtenance shall be insulated flush with the insulation surrounding the pipe. 
+[d:line1/][d:tab1/]ii. Where the outer diameter of the appurtenance is greater than the outer diameter of the insulated pipe that it is attached to, the appurtenance shall be insulated with a minimum thickness of 1 inch. [d:line1/][d:tab1/]iii. The insulation shall be removable and re-installable to ensure maintenance or replacement services can be completed.[d:line1/][d:tab1/]iv. Valves shall be fully functional without impediment from the insulation. [/d:list][/d:l]
+[d:line1/] [d:b]2. Insulation Thickness[/d:b]: All piping for multifamily domestic hot water systems shall meet the insulation thickness requirements specified in Table 160.4-A [d:l t="a"][d:list]For insulation conductivity in the range shown in Table 160.4-A for the applicable fluid temperature range, the insulation shall have the applicable minimum thickness or R-value shown in Table 160.4-A.[/d:list] 
+[d:list]If the insulation conductivity falls outside the range provided in Table 160.4-A applicable fluid temperature range, the insulation shall meet a minimum R-value as indicated in Table 160.4-A. Or, it can have a thickness determined using Equation 160.4-A.[/d:list] [d:list]Insulation conductivity shall be determined in accordance with ASTM C335 at the mean temperature listed in Table 160.4-A, and shall be rounded to the nearest 1/100 Btu-inch per hour per square foot per [d:deg/]F.[/d:list][/d:l]
+[d:line1/] [d:b]3. Insulation Protection[/d:b]: Pipe Insulation shall be protected from damage due to sunlight, moisture, equipment maintenance and wind. Protection shall, at minimum, include the following: [d:l t="a"][d:list] Pipe and appurtenance insulation exposed to weather shall be protected by a cover suitable for outdoor service. The cover shall be water retardant and provide shielding from solar radiation that can cause degradation of the material. Appurtenance insulation covers shall be removable and able to be reinstalled. Adhesive tape shall not be used to provide this protection. [/d:list]
+[d:list] Pipe insulation covering chilled water piping and refrigerant suction piping located outside the conditioned space shall include, or be protected by, a Class I or Class II vapor retarder. All penetrations and joints shall be sealed. [/d:list][d:list] Pipe insulation buried below grade must be installed in a waterproof and noncrushable casing or sleeve. [/d:list][/d:l] </xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="FEndNote1" minOccurs="0">
@@ -1574,7 +1693,7 @@ Check:  If result != C06 flag as non-compliant and do not allow doc to be regist
          </xsd:element>
          <xsd:element name="Section_G" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Compact Hot Water Distribution (CHWDS) RA4.4.6</xsd:documentation>
+               <xsd:documentation source="FieldText">Compact Hot Water Distribution RA4.4.6</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is applicable if at least one dwelling has B10_CompactDistributionType == BasicType Or at least one dwelling has Section B2 Hpi_08_CompactDistributionType == BasicType.  Require one row of data, reporting the longest distances, for each dwelling unit  with B10_CompactDistributionType == BasicType Ot Hpi_08_CompactDistributionType == BasicType.
  
 In this section parent CC refers to the parent LMCC</xsd:documentation>
@@ -1722,7 +1841,7 @@ End If</xsd:documentation>
          </xsd:element>
          <xsd:element name="Section_H" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Parallel Piping Requirements (PP) (RA4.4.4)</xsd:documentation>
+               <xsd:documentation source="FieldText">Central Parallel Piping Requirements (RA4.4.4)</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is applicable if there is at least one water heating system that has A09_ResidentialDHWDwellingUnitDistributionType == StandardDistributionCentralParallelPiping Or at least one water heating system that has Section A2  A2hp07_ResidentialDHWDwellingUnitDistributionType == StandardDistributionCentralParallelPiping</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
@@ -1845,7 +1964,7 @@ End If</xsd:documentation>
          </xsd:element>
          <xsd:element name="Section_K" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Recirculation Non-Demand Controls Requirements (R-ND) (RA4.4.8)</xsd:documentation>
+               <xsd:documentation source="FieldText">Recirculation Non-Demand Controls Requirements (RA4.4.8)</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is applicable if there is at least one water heating system that has A09_ResidentialDHWDwellingUnitDistributionType == RecirculationNonDemand Or at least one water heating system that has  Section A2  A2hp07_ResidentialDHWDwellingUnitDistributionType == RecirculationNonDemand</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
@@ -1874,7 +1993,7 @@ End If</xsd:documentation>
          </xsd:element>
          <xsd:element name="Section_L" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Demand Recirculation Manual Control (R-DRmc) (RA4.4.9)/ Sensor Control Requirements (RDRsc) (RA4.4.10)</xsd:documentation>
+               <xsd:documentation source="FieldText">Demand Recirculation Manual Control (RA4.4.9)/ Sensor Control (RA4.4.10) Requirements</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is applicable if there is at least one water heating system that has A09_ResidentialDHWDwellingUnitDistributionType == DemandRecirculationManualControl Or DemandRecirculationSensorControls Or at least one water heating system that has  Section A2  A2hp07_ResidentialDHWDwellingUnitDistributionType == DemandRecirculationManualControl Or DemandRecirculationSensorControls</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
@@ -1901,7 +2020,7 @@ End If</xsd:documentation>
                   <xsd:element name="L03" minOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"></xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Manual controls may be activated by wired or wireless mechanisms.</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Manual controls may be activated by wired or wireless mechanisms. Each control shall have standby power of 1 Watt or less</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="L04" minOccurs="0">

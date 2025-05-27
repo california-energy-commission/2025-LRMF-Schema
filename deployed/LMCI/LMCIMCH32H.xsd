@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/LMCIMCH32H" version="2025.0.000" xmlns="http://www.lmonte.com/besm/LMCIMCH32H" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:com="http://www.lmonte.com/besm/com" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
+<xsd:schema xmlns="http://www.lmonte.com/besm/LMCIMCH32H" xmlns:d="http://www.lmonte.com/besm/d" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:env="http://www.lmonte.com/besm/env" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:com="http://www.lmonte.com/besm/com" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/LMCIMCH32H" version="2025.0.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="../base/ResLighting.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/comp" schemaLocation="../base/ResCompliance.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="../base/DataTypes.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="../base/ResLighting.xsd"/>
    <xsd:element name="ComplianceDocumentPackage">
       <xsd:complexType>
          <xsd:sequence>
-            <xsd:element name="DocID" minOccurs="0">
+            <xsd:element minOccurs="0" name="DocID">
                <xsd:complexType>
-                  <xsd:attribute name="doc" type="comp:ComplianceDocumentTag" fixed="LMCIMCH32H"/>
-                  <xsd:attribute name="docType" type="comp:ComplianceDocumentType" fixed="CERTIFICATE OF INSTALLATION"/>
-                  <xsd:attribute name="docTitle" type="comp:ComplianceDocumentTitleRes" fixed="Local Mechanical Exhaust"/>
+                  <xsd:attribute fixed="LMCIMCH32H" name="doc" type="comp:ComplianceDocumentTag"/>
+                  <xsd:attribute fixed="CERTIFICATE OF INSTALLATION" name="docType" type="comp:ComplianceDocumentType"/>
+                  <xsd:attribute fixed="Local Mechanical Exhaust" name="docTitle" type="comp:ComplianceDocumentTitleRes"/>
                </xsd:complexType>
             </xsd:element>
             <xsd:element name="Payload" type="comp:Payload"/>
@@ -30,10 +29,10 @@
                </xsd:complexType>
             </xsd:element>
             <xsd:element name="Report" type="xsd:base64Binary"/>
-            <xsd:element name="ReportMMB" type="xsd:base64Binary" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="ReportMMB" type="xsd:base64Binary"/>
          </xsd:sequence>
-         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20250101"/>
-         <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="LMCIMCH32H"/>
+         <xsd:attribute fixed="rev 20250101" name="revision" type="xsd:string" use="required"/>
+         <xsd:attribute fixed="LMCIMCH32H" name="doc" type="comp:ComplianceDocumentTag" use="required"/>
       </xsd:complexType>
    </xsd:element>
    <xsd:complexType name="LMCIMCH32H">
@@ -41,7 +40,7 @@
          <xsd:documentation>Local Mechanical Exhaust</xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element name="Section_A" minOccurs="1" maxOccurs="1">
+         <xsd:element maxOccurs="1" minOccurs="1" name="Section_A">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Local Mechanical Exhaust - General Information</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">In this section parent CC refers to the parent LMCC Certificate of Compliance (CC) and Mch01 refers to the LMCI-Mch-01</xsd:documentation>
@@ -49,11 +48,10 @@
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="A_BeforeNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="A_BeforeNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Before Section Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Title 24, Part 6, Section 160.2(b)2 
-                           <d:b>Ventilation and Indoor Air Quality for Attached Dwelling Units.</d:b> All dwelling units shall meet the requirements of ASHRAE Standard 62.2. Ventilation and Acceptable Indoor Air Quality in Residential Buildings, subject to the amendments specified in Section 160.2(b)2A</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Title 24, Part 6, Section 160.2(b)2 <d:b>Ventilation and Indoor Air Quality for Attached Dwelling Units.</d:b> All dwelling units shall meet the requirements of ASHRAE Standard 62.2. Ventilation and Acceptable Indoor Air Quality in Residential Buildings, subject to the amendments specified in Section 160.2(b)2A</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A01_DwellingUnitName" type="com:DwellingUnitName">
@@ -69,7 +67,7 @@
                      </xsd:annotation>
                      <xsd:simpleType>
                         <xsd:restriction base="com:ResidentialBuildingTypeMechExhaust">
-                           <xsd:enumeration value="MultiFamily"/>
+                           <xsd:enumeration value="MultiFamily"/>                          
                         </xsd:restriction>
                      </xsd:simpleType>
                   </xsd:element>
@@ -143,6 +141,7 @@ End If</xsd:documentation>
                            <dtyp:displayterm value="true">Enclosed</dtyp:displayterm>
                            <dtyp:displayterm value="false">Non-Enclosed</dtyp:displayterm>
                         </xsd:appinfo>
+                        
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A07_DwellingUnitConditionedFloorArea" type="com:DwellingUnitConditionedFloorArea">
@@ -160,56 +159,48 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_B" minOccurs="0" maxOccurs="1">
+         <xsd:element maxOccurs="1" minOccurs="0" name="Section_B">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Local Mechanical Exhaust System  
-                  <d:i>(Section 160.2(b)2Avi)</d:i> - Fan selection and Duct Design Criteria for Compliance</xsd:documentation>
+               <xsd:documentation source="FieldText">Local Mechanical Exhaust System  <d:i>(Section 160.2(b)2Avi)</d:i> - Fan selection and Duct Design Criteria for Compliance</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section consists entirely of static text reproducing 2022 T24 Standards Table 160.2-E, Table 160.2-F, Table 160.2-G and Table 160.2-H</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="B_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="B_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">Local mechanical exhaust fans shall be installed in each kitchen and bathroom in accordance with Section 160.2(b)2Aiv. Systems shall be rated for airflow in accordance with ASHRAE 62.2 section 7.1 
-                           <d:i> Delivered local ventilation rates:  
-                              <d:l t="*">
-                                 <d:list> All local ventilation rates have been measured using a flow hood, flow grid, or other airflow measuring device and meet the requirements of Tables 160.2-E, 160.2-F or 160.2-G OR </d:list>
-                                 <d:list> The airflow rating at a pressure of 0.25 in w.c. of a certified fan is assumed because the local ventilation system duct sizing meets the prescriptive requirements of Table 160.2-H, </d:list>
-                              </d:l>
-                           </d:i>
-                        </xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Local mechanical exhaust fans shall be installed in each kitchen and bathroom in accordance with Section 160.2(b)2Aiv. Systems shall be rated for airflow in accordance with ASHRAE 62.2 section 7.1 <d:i> Delivered local ventilation rates:  <d:l t="*"><d:list> All local ventilation rates have been measured using a flow hood, flow grid, or other airflow measuring device and meet the requirements of Tables 160.2-E, 160.2-F or 160.2-G OR </d:list><d:list> The airflow rating at a pressure of 0.25 in w.c. of a certified fan is assumed because the local ventilation system duct sizing meets the prescriptive requirements of Table 160.2-H, </d:list></d:l></d:i></xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="B_Table160_2E" minOccurs="0">
+                  <xsd:element minOccurs="0" name="B_Table160_2E">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Table 160.2_E  Demand-Controlled Local Ventialtion Exhaust Aiflow Rates and Capture Efficiency</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-E from 2022 T24 Standards as shown in the layout doc</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-E from 2025 T24 Standards as shown in the layout doc</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="B_Table160_2F" minOccurs="0">
+                  <xsd:element minOccurs="0" name="B_Table160_2F">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Table 160.2_F  Continuous Local Ventialtion Exhaust Aiflow Rates</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-F from 2022 T24 Standards as shown in the layout doc</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-F from 2025 T24 Standards as shown in the layout doc</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="B_Table160_2G" minOccurs="0">
+                  <xsd:element minOccurs="0" name="B_Table160_2G">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Table 160.2_G  Kitchen Range Hood Aiflow Rates (cfm) and ASTM E3087 Capture Efficiency(CE) Ratings According to Dwelling Unit Floor Area and Kitchen Range Fuel Type</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-G from 2022 T24 Standards as shown in the layout doc</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-G from 2025 T24 Standards as shown in the layout doc</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="B_Table160_2H" minOccurs="0">
+                  <xsd:element minOccurs="0" name="B_Table160_2H">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Table 160.2_H  Prescriptive Ventialtion System Duct Sizing</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-H from 2022 T24 Standards as shown in the layout doc</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Insert in report Table 160.2-H from 2025 T24 Standards as shown in the layout doc</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_C" minOccurs="1" maxOccurs="1">
+         <xsd:element maxOccurs="1" minOccurs="1" name="Section_C">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Kitchen Exhaust Systems</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
@@ -222,7 +213,7 @@ End If</xsd:documentation>
                      </xsd:annotation>
                      <xsd:complexType>
                         <xsd:sequence>
-                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                           <xsd:element maxOccurs="unbounded" minOccurs="1" name="Row">
                               <xsd:complexType>
                                  <xsd:sequence>
                                     <xsd:element name="C01_KitchenExhaustSystemName" type="com:KitchenExhaustSystemName">
@@ -237,7 +228,7 @@ End If</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">User input text up to 50 characters</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="C03_KitchenExhaustSystemType" type="com:KitchenExhaustSystemType" maxOccurs="1">
+                                    <xsd:element maxOccurs="1" name="C03_KitchenExhaustSystemType" type="com:KitchenExhaustSystemType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">System Type</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">User selects from list: Downdraft display term Downdraft, Other display term Other, VentedRangeHood display term Vented Range Hood</xsd:documentation>
@@ -297,7 +288,7 @@ End If</xsd:documentation>
                                        <xsd:element name="C09_MinimumAirflowRateRequired" type="comp:MinimumAirflowRateRequired">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Required Minimum Ventilation Rate</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field (results are in CFM): If C09a = Capture Efficiency, then result = N/A – See Table D2; 
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field (results are in CFM): If C09a = Capture Efficiency, then result = N/A – See Table E; 
                                                 Elseif C09a = Airflow, then calculate the following as default:
                                                 If the following three conditions are met: (1) C08=Demand Control, (2) C03=Vent Range Hood, and (3) A08=Electric, AND
                                                 If A07 GT 1500, then result = 110;
@@ -340,12 +331,12 @@ End If</xsd:documentation>
                                              <xsd:appinfo source="displayterm">
                                                 <dtyp:displayterm value="N/A-D">N/A - See Table D</dtyp:displayterm>
                                                 <dtyp:displayterm value="N/A-D2">N/A - See Table D2</dtyp:displayterm>
-                                             </xsd:appinfo>
+                                             </xsd:appinfo>                                             
                                           </xsd:annotation>
                                           <xsd:simpleType>
                                              <xsd:restriction base="comp:NotApplicableMessage">
                                                 <xsd:enumeration value="N/A-D"/>
-                                                <xsd:enumeration value="N/A-D2"/>
+                                                <xsd:enumeration value="N/A-D2"/>                                                  
                                              </xsd:restriction>
                                           </xsd:simpleType>
                                        </xsd:element>
@@ -442,7 +433,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_D" minOccurs="1">
+         <xsd:element minOccurs="1" name="Section_D">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Continuous Kitchen Exhaust</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
@@ -494,7 +485,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_D2" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_E">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Kitchen Range Hood Capture Efficiency Option</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required If C09a_HoodExhaustComplianceMethod == CaptureEfficiency</xsd:documentation>
@@ -522,8 +513,7 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Cap04_MinimumRequiredCaptureEfficiency" type="comp:MinimumRequiredCaptureEfficiency">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Required Minimum Capture Efficiency (
-                           <d:i>Table 160.2-G</d:i>)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Required Minimum Capture Efficiency (<d:i>Table 160.2-G</d:i>)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field
 If A07_DwellingUnitConditionedFloorArea GT 1500 Then
 If A08_FuelType == Electric
@@ -568,57 +558,50 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_E" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_F">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Other Requirements</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="E_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="FBeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">
-                           <d:i>The items listed below correspond to the information given in Section 160.2(b)2.   Refer also to Chapter 4.6 of the Residential Compliance Manual  for information describing these requirements in more detail.  The signature of the Responsible Person in the declaration statement below certifies that the building complies with these requirements if applicable.</d:i>
-                        </xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements"><d:i>The items listed below correspond to the information given in Section 160.2(b)2.   Refer also to Chapter 4.6 of the Residential Compliance Manual  for information describing these requirements in more detail.  The signature of the Responsible Person in the declaration statement below certifies that the building complies with these requirements if applicable.</d:i></xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E01" minOccurs="0">
+                  <xsd:element minOccurs="0" name="F01">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"/>
-                        <xsd:documentation source="AdditionalRequirements">Demand control exhaust system shall be provided with at least one of the following: 
-                           <d:l t="#">
-                              <d:list> A readily accessible occupant-controlled on-off control.</d:list>
-                              <d:list> An automatic control that does not impeded occupant on control.</d:list>
-                           </d:l>
-                        </xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Demand control exhaust system shall be provided with at least one of the following: <d:l t="#"><d:list> A readily accessible occupant-controlled on-off control.</d:list><d:list> An automatic control that does not impeded occupant on control.</d:list></d:l></xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E02" minOccurs="0">
+                  <xsd:element minOccurs="0" name="F02">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"/>
                         <xsd:documentation source="AdditionalRequirements">Nonenclosed kitchens shall be provided with a demand-controlled mechanical exhaust system.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E03" minOccurs="0">
+                  <xsd:element minOccurs="0" name="F03">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"/>
                         <xsd:documentation source="AdditionalRequirements">Each continuous mechanical exhaust system shall be provided with a readily accessible manual on-off control. (Multifamily dwellings are exempt from readily accessible requirement. )</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E04" minOccurs="0">
+                  <xsd:element minOccurs="0" name="F04">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"/>
                         <xsd:documentation source="AdditionalRequirements">Continuous mechanical exhaust systems shall be designed to operate during all occupiable hours.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E05" minOccurs="0">
+                  <xsd:element minOccurs="0" name="F05">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText"/>
                         <xsd:documentation source="AdditionalRequirements">Exhaust fans in separate dwelling units shall not share a common exhaust duct.  Exhaust inlets from more than one dwelling unit may be served by a single exhaust fan downstream of all the exhaust inlets if the fan is designated and intended to run continuously or if each inlet is equipped with a back-draft damper to prevent cross-contamination when the fan is not running.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="EEndNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="FEndNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>

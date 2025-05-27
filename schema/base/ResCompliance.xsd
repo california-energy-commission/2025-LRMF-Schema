@@ -3459,6 +3459,9 @@
             <dtyp:displayterm value="Space Conditioning System Fan Efficacy">Space Conditioning System Fan Efficacy</dtyp:displayterm>
             <dtyp:displayterm value="Space Conditioning Systems, Ducts, and Fans">Space Conditioning Systems, Ducts, and Fans</dtyp:displayterm>
             <dtyp:displayterm value="Variable Capacity Heat Pump Compliance Credit">Variable Capacity Heat Pump Compliance Credit</dtyp:displayterm>
+            <dtyp:displayterm value="Verified Individual Dwelling Unit Hot Water System Distribution">Verified Individual Dwelling Unit Hot Water System Distribution</dtyp:displayterm>
+            <dtyp:displayterm value="Verified Multifamily Central Hot Water System Distribution">Verified Multifamily Central Hot Water System Distribution</dtyp:displayterm>
+            <dtyp:displayterm value="Verified Single Dwelling Unit Hot Water System Distribution">Verified Single Dwelling Unit Hot Water System Distribution</dtyp:displayterm>
             <dtyp:displayterm value="Water Heating System General Information">Water Heating System General Information</dtyp:displayterm>
             <dtyp:displayterm value="Whole House Fan">Whole House Fan</dtyp:displayterm>
             <dtyp:displayterm value="Whole House Fan Airflow and Fan Efficacy">Whole House Fan Airflow and Fan Efficacy</dtyp:displayterm>
@@ -3539,6 +3542,9 @@
          <xsd:enumeration value="Space Conditioning System Fan Efficacy"/>
          <xsd:enumeration value="Space Conditioning Systems, Ducts, and Fans"/>
          <xsd:enumeration value="Variable Capacity Heat Pump Compliance Credit"/>
+         <xsd:enumeration value="Verified Individual Dwelling Unit Hot Water System Distribution"/>
+         <xsd:enumeration value="Verified Multifamily Central Hot Water System Distribution"/>
+         <xsd:enumeration value="Verified Single Dwelling Unit Hot Water System Distribution"/>
          <xsd:enumeration value="Water Heating System General Information"/>
          <xsd:enumeration value="Whole House Fan"/>
          <xsd:enumeration value="Whole House Fan Airflow and Fan Efficacy"/>
@@ -4865,6 +4871,68 @@
          <xsd:enumeration value="NA_SpaceLT5000Ft2"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerCompliance">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No - Do Not Proceed</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerControls">
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerMaxMinutes">
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerMinutes">
+      <xsd:restriction base="dtyp:IntegerNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerSetting">
+      <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerTestApplies">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="TestApplies">Test applies and no exceptions</dtyp:displayterm>
+            <dtyp:displayterm value="Exception1TestNA">Test does not apply because of Exception 1</dtyp:displayterm>
+            <dtyp:displayterm value="Exception2TestNA">Test does not apply because of Exception 2</dtyp:displayterm>
+            <dtyp:displayterm value="NoHeatPumpTestNA">Test does not apply because system does not have a heat pump</dtyp:displayterm>
+            <dtyp:displayterm value="NoAdjustDefrostDelayTimer">Test does not apply because no adjustable Defrost Delay Timer Setting</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Exception1TestNA"/>
+         <xsd:enumeration value="Exception2TestNA"/>
+         <xsd:enumeration value="NoAdjustDefrostDelayTimer"/>
+         <xsd:enumeration value="NoHeatPumpTestNA"/>
+         <xsd:enumeration value="TestApplies"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DefrostDelayTimerTestMessage">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="TestApplies">Test applies and no exceptions</dtyp:displayterm>
+            <dtyp:displayterm value="Exception1Message">This test is not applicable because of Exception 1</dtyp:displayterm>
+            <dtyp:displayterm value="Exception2Message">This test is not applicable because of Exception 2</dtyp:displayterm>
+            <dtyp:displayterm value="NoHeatPumpTestNA">This test is not applicable because system does not have a heat pump</dtyp:displayterm>
+            <dtyp:displayterm value="NoTimerMessage">This test is not applicable because there is no installer adjustable Defrost Delay Timer Setting to control defrost</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="Exception1Message"/>
+         <xsd:enumeration value="Exception2Message"/>
+         <xsd:enumeration value="NoTimerMessage"/>
+         <xsd:enumeration value="NoHeatPumpTestNA"/>
+         <xsd:enumeration value="TestApplies"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="DehumidifyCompliance">
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
@@ -5331,6 +5399,16 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">Building complies</dtyp:displayterm>
             <dtyp:displayterm value="false">Building does not comply</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="DoesCalPlumbCodeAppendixMApply">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
@@ -6232,9 +6310,9 @@
             <dtyp:displayterm value="ExemptNoCooling">Exempt - No Cooling</dtyp:displayterm>
             <dtyp:displayterm value="ExemptRA3_3Protocols">Exempt - Approved Protocols N/A</dtyp:displayterm>
             <dtyp:displayterm value="ExemptVCHP">Exempt - VCHP System</dtyp:displayterm>
-            <dtyp:displayterm value="HERS_FanEfficacyAirflowRate">HERS verified fan efficacy (W/cfm) and airflow rate (cfm/ton)</dtyp:displayterm>
-            <dtyp:displayterm value="HERS_ReturnDuctDesignTable150">HERS verified return duct design per Table 150.0-B, C</dtyp:displayterm>
-            <dtyp:displayterm value="HERS_ReturnDuctDesignTable160_3">HERS verified return duct design per Table 160.3-A, B</dtyp:displayterm>
+            <dtyp:displayterm value="HERS_FanEfficacyAirflowRate">ECC verified fan efficacy (W/cfm) and airflow rate (cfm/ton)</dtyp:displayterm>
+            <dtyp:displayterm value="HERS_ReturnDuctDesignTable150">ECC verified return duct design per Table 150.0-B, C</dtyp:displayterm>
+            <dtyp:displayterm value="HERS_ReturnDuctDesignTable160_3">ECC verified return duct design per Table 160.3-A, B</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
@@ -6321,7 +6399,7 @@
       <xsd:annotation>
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="DuctLessThan40Feet">Altered duct system has less than 40 ft of duct</dtyp:displayterm>
-            <dtyp:displayterm value="DuctsSealedHERS_TestedCertified">Existing ducts have previously been sealed, tested, and certified by a HERS rater</dtyp:displayterm>
+            <dtyp:displayterm value="DuctsSealedHERS_TestedCertified">Existing ducts have previously been sealed, tested, and certified by a ECC rater</dtyp:displayterm>
             <dtyp:displayterm value="DuctSystemAsbestos">Existing duct system is insulated or sealed with asbestos</dtyp:displayterm>
             <dtyp:displayterm value="NoExemptions">None</dtyp:displayterm>
             <dtyp:displayterm value="NotApplicable">N/A</dtyp:displayterm>
@@ -7049,6 +7127,28 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="ElectricReadyScopeMF">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ReadyCentralHPWH">Central Heat Pump Water Heater Ready</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyElecCooktop">Electric Cooktop Ready (For systems using gas or proprane cooktop)</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyElecDryer">Electric Clothes Dryer Ready - Systems Serving Individual Dwelling Units (Clothes dryers with gas or proprane plumbing)</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyElecDryerCommon">Electric Clothes Dryer Ready - Systems in Common Areas (Clothes dryers with gas or proprane plumbing)</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyHeatingHP">Heat Pump Space Heater Ready (For systems using gas or proprane furnace)</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyIndividualHPWH">Individual Heat Pump Water Heater Ready</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyElecNA">None of these</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ReadyCentralHPWH"/>
+         <xsd:enumeration value="ReadyElecCooktop"/>
+         <xsd:enumeration value="ReadyElecDryer"/>
+         <xsd:enumeration value="ReadyElecDryerCommon"/>
+         <xsd:enumeration value="ReadyHeatingHP"/>
+         <xsd:enumeration value="ReadyIndividualHPWH"/>
+         <xsd:enumeration value="ReadyElecNA"/>  
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ElectronicSignature">
@@ -9972,6 +10072,7 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="ACCA_ManualJ">ACCA Manual J</dtyp:displayterm>
             <dtyp:displayterm value="ASHRAE_Handbook">ASHRAE Handbook</dtyp:displayterm>
+            <dtyp:displayterm value="Except1AddBlockLoad">Exception 1 to Section 150.0(h)1: Block loads, (the total load for all rooms combined that are served by the central equipment), may be used for the purpose of system sizing for additions.</dtyp:displayterm>
             <dtyp:displayterm value="NotApplicableEquipmentChangeout">Not applicable - equipment changeout, like-for-like</dtyp:displayterm>
             <dtyp:displayterm value="SMACNA_ResidentialComfortSystemManual">SMACNA Residential Comfort System Installation Standards Manual</dtyp:displayterm>
          </xsd:appinfo>
@@ -9979,6 +10080,7 @@
       <xsd:restriction base="dtyp:EnumerationConstantPermissive">
          <xsd:enumeration value="ACCA_ManualJ"/>
          <xsd:enumeration value="ASHRAE_Handbook"/>
+         <xsd:enumeration value="Except1AddBlockLoad"/>
          <xsd:enumeration value="NotApplicableEquipmentChangeout"/>
          <xsd:enumeration value="SMACNA_ResidentialComfortSystemManual"/>
       </xsd:restriction>
@@ -10017,6 +10119,20 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="HvacOutdoorDesignCondSource">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ACCA_ManualJ">ACCA Manual J</dtyp:displayterm>
+            <dtyp:displayterm value="ASHRAE_Handbook">ASHRAE Handbook</dtyp:displayterm>
+            <dtyp:displayterm value="JointAppendix2">Joint Appendix JA2</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstantPermissive">
+         <xsd:enumeration value="ACCA_ManualJ"/>
+         <xsd:enumeration value="ASHRAE_Handbook"/>
+         <xsd:enumeration value="JointAppendix2"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="HvacSystemDesignMeetsGoals">
@@ -11832,6 +11948,18 @@
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="LeakageInLoadCalcSource">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="FieldVerificationTesting">Field Verification and Diagnostic Testing</dtyp:displayterm>
+            <dtyp:displayterm value="Table150C">Table 150-C</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="FieldVerificationTesting"/>
+         <xsd:enumeration value="Table150C"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="LeakageTestCondition">
@@ -14216,6 +14344,66 @@
          <xsd:enumeration value="PoolReqNA"/>
          <xsd:enumeration value="PoolReqNotMet"/>
          <xsd:enumeration value="PumpFlowRate"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PoolSpaComplianceExceptions">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="ExceptionAlternations">3. Alterations to existing pool and/or spa with existing heating systems or equipment</dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionSolar">4. A pool and/or spa that is heated solely by a solar pool heating system without any backup heater</dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionNA">1. N/A</dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionSpaElectric"> 2. Portable electric spas compliant with 20 CCR 1605.3(g)(7) of the Appliance Efficiency Regulations</dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionSpaGas">5. Heating systems which are used exclusively for permanent spa applications in existing buildings with gas availability </dtyp:displayterm>
+            <dtyp:displayterm value="ExceptionSpaSARA">6. Heating systems which are used exclusively for permanent spa applications where there is inadequate Solar Access Roof Area (SARA) as specified in Section 150.1(c)14 for a solar pool heating system to be installed</dtyp:displayterm>            
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="ExceptionAlternations"/>
+         <xsd:enumeration value="ExceptionNA"/>
+         <xsd:enumeration value="ExceptionSolar"/>
+         <xsd:enumeration value="ExceptionSpaElectric"/>
+         <xsd:enumeration value="ExceptionSpaGas"/>
+         <xsd:enumeration value="ExceptionSpaSARA"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PoolSpaComplianceMethod">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="MethodAlternateHeating">5. Alterative pool heating system approved by CEC Executive Director</dtyp:displayterm>
+            <dtyp:displayterm value="MethodHPPH">2. Heat Pump Pool Heater (HPPH)</dtyp:displayterm>
+            <dtyp:displayterm value="MethodException">6. N/A - Qualified Exceptions (must select Qualifying Exception below)</dtyp:displayterm>
+            <dtyp:displayterm value="MethodSolarHPCombo"> 4. Combination solar pool heater and heat pump pool heater with no additional supplementary heater</dtyp:displayterm>
+            <dtyp:displayterm value="MethodSolarHeater">1. Solar pool heater with a solar collector surface area that is greater than or equal to 60 percent of the pool and/or spa surface area. </dtyp:displayterm>
+            <dtyp:displayterm value="MethodRenewRecover">3. 60% on-site renewable or recovery energy</dtyp:displayterm>            
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="MethodAlternateHeating"/>
+         <xsd:enumeration value="MethodHPPH"/>
+         <xsd:enumeration value="MethodException"/>
+         <xsd:enumeration value="MethodSolarHPCombo"/>
+         <xsd:enumeration value="MethodSolarHeater"/>
+         <xsd:enumeration value="MethodRenewRecover"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="PoolSpaMethodRequirements">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AlternateHeating">The system shall be verified as an CEC Executive Director approved alterative.</dtyp:displayterm>
+            <dtyp:displayterm value="HPPH">This project requires a Heat Pump Pool Heater (HPPH) as the primary heat source. The HPPH shall be sized according to the HPPH manufacturer's specifications. If the HPPH manufacturer's specifications do not include information on HPPH sizing, use the sizing provisions in Reference Joint Appendix JA16.3. The supplementary heater can be of any energy source.</dtyp:displayterm>
+            <dtyp:displayterm value="PoolSpaExceptionDoc">The responsible person shall provide documentation for the qualifying exception and submit together with this CF2R.</dtyp:displayterm>
+            <dtyp:displayterm value="SolarHPCombo">This project requires a combination solar pool heater and heat pump pool heater. The system shall have no additional supplementary heater.</dtyp:displayterm>
+            <dtyp:displayterm value="SolarHeater">This project requires a solar pool heating system with a solar collector surface area that is equivalent to 60 percent or greater of the pool and/or spa surface area. The minimum solar collector surface area required</dtyp:displayterm>
+            <dtyp:displayterm value="RenewRecover">This project requires an on-site renewable or on-site recovery energy source that provides at least 60 percent of the calculated annual energy consumption of the pool and/or spa heater. The mechanical engineer or responsible person shall provide documentation and submit together with this CF2R.</dtyp:displayterm>            
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AlternateHeating"/>
+         <xsd:enumeration value="HPPH"/>
+         <xsd:enumeration value="PoolSpaExceptionDoc"/>
+         <xsd:enumeration value="SolarHPCombo"/>
+         <xsd:enumeration value="SolarHeater"/>
+         <xsd:enumeration value="RenewRecover"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="PoolSpaRequirements">
@@ -17741,6 +17929,13 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
       <xsd:restriction base="dtyp:DecimalNonnegative">
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="SolarCollectorMinimumSurfaceArea">
+      <xsd:annotation>
+         <xsd:documentation>  Units: ft2</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:DecimalNonnegative">
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="SolarPhotvoltaicSystemPowerRating">
       <xsd:annotation>
          <xsd:documentation>  Units: W</xsd:documentation>
@@ -18377,6 +18572,51 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:token">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SupplementHeatLockoutControls">
+      <xsd:restriction base="xsd:token"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SupplementHeatLockoutSetting">
+      <xsd:restriction base="xsd:token"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SupplementHeatLockoutTemp">
+      <xsd:restriction base="dtyp:DecimalNonnegative"/>
+   </xsd:simpleType>
+   <xsd:simpleType name="SupplementHeatLockoutTestApplies">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="TestApplies">Test applies and no exceptions</dtyp:displayterm>
+            <dtyp:displayterm value="Exception1TestNA">Test does not apply because of Exception 1</dtyp:displayterm>
+            <dtyp:displayterm value="Exception2TestNA">Test does not apply because of Exception 2</dtyp:displayterm>
+            <dtyp:displayterm value="NoHeatPumpTestNA">Test does not apply because system does not have a heat pump</dtyp:displayterm>
+            <dtyp:displayterm value="NoSupplementHeat">Test does not apply because heating system does not include heat pump with auxiliary heating.</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+            <xsd:enumeration value="Exception1TestNA"/>
+            <xsd:enumeration value="Exception2TestNA"/>
+            <xsd:enumeration value="NoSupplementHeat"/>
+            <xsd:enumeration value="NoHeatPumpTestNA"/>
+            <xsd:enumeration value="TestApplies"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="SupplementHeatLockoutTestMessage">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="TestApplies"></dtyp:displayterm>
+            <dtyp:displayterm value="Exception1Message">This test is not applicable because of Exception 1</dtyp:displayterm>
+            <dtyp:displayterm value="Exception2Message">This test is not applicable because of Exception 2</dtyp:displayterm>
+            <dtyp:displayterm value="NoHeatPumpTestNA"></dtyp:displayterm>
+            <dtyp:displayterm value="NoSupplementHeatMessage">This test is not applicable because the heating system does not include a heat pump with auxiliary heating</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+            <xsd:enumeration value="Exception1Message"/>
+            <xsd:enumeration value="Exception2Message"/>
+            <xsd:enumeration value="NoSupplementHeatMessage"/>
+            <xsd:enumeration value="NoHeatPumpTestNA"/>
+            <xsd:enumeration value="TestApplies"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="SupplyDuctSurfaceBuriedRValueVerificationRequired">
@@ -20110,6 +20350,16 @@ Time Dependent Valuation (TDV) Gas Propane energy is calculated by multiplying t
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="true">Required</dtyp:displayterm>
             <dtyp:displayterm value="false">Not required</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="VerifyCentralHotWaterDistInsulation">
+      <xsd:annotation>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+            <dtyp:displayterm value="false">No</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="xsd:boolean">
