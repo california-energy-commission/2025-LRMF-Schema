@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/LMCIMCH25H" version="2025.0.000" xmlns="http://www.lmonte.com/besm/LMCIMCH25H" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:com="http://www.lmonte.com/besm/com" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:d="http://www.lmonte.com/besm/d" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:env="http://www.lmonte.com/besm/env" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
+<xsd:schema xmlns="http://www.lmonte.com/besm/LMCIMCH25H" xmlns:d="http://www.lmonte.com/besm/d" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:env="http://www.lmonte.com/besm/env" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:com="http://www.lmonte.com/besm/com" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.lmonte.com/besm/LMCIMCH25H" version="2025.0.000">
    <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="../base/ResLighting.xsd"/>
+   <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/comp" schemaLocation="../base/ResCompliance.xsd"/>
    <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="../base/DataTypes.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
-   <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="../base/ResLighting.xsd"/>
    <xsd:element name="ComplianceDocumentPackage">
       <xsd:complexType>
          <xsd:sequence>
-            <xsd:element name="DocID" minOccurs="0">
+            <xsd:element minOccurs="0" name="DocID">
                <xsd:complexType>
-                  <xsd:attribute name="doc" type="comp:ComplianceDocumentTag" fixed="LMCIMCH25H"/>
-                  <xsd:attribute name="docType" type="comp:ComplianceDocumentType" fixed="CERTIFICATE OF INSTALLATION"/>
-                  <xsd:attribute name="docTitle" type="comp:ComplianceDocumentTitleRes" fixed="Refrigerant Charge Verification"/>
+                  <xsd:attribute fixed="LMCIMCH25H" name="doc" type="comp:ComplianceDocumentTag"/>
+                  <xsd:attribute fixed="CERTIFICATE OF INSTALLATION" name="docType" type="comp:ComplianceDocumentType"/>
+                  <xsd:attribute fixed="Refrigerant Charge Verification" name="docTitle" type="comp:ComplianceDocumentTitleRes"/>
                </xsd:complexType>
             </xsd:element>
             <xsd:element name="Payload" type="comp:Payload"/>
@@ -30,10 +29,10 @@
                </xsd:complexType>
             </xsd:element>
             <xsd:element name="Report" type="xsd:base64Binary"/>
-            <xsd:element name="ReportMMB" type="xsd:base64Binary" minOccurs="0"/>
+            <xsd:element minOccurs="0" name="ReportMMB" type="xsd:base64Binary"/>
          </xsd:sequence>
-         <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20250101"/>
-         <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="LMCIMCH25H"/>
+         <xsd:attribute fixed="rev 20250101" name="revision" type="xsd:string" use="required"/>
+         <xsd:attribute fixed="LMCIMCH25H" name="doc" type="comp:ComplianceDocumentTag" use="required"/>
       </xsd:complexType>
    </xsd:element>
    <xsd:complexType name="LMCIMCH25H">
@@ -41,7 +40,7 @@
          <xsd:documentation>Refrigerant Charge Verification</xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element name="Section_A" minOccurs="1">
+         <xsd:element minOccurs="1" name="Section_A">
             <xsd:annotation>
                <xsd:documentation source="FieldText">System Information</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">All references to the MCH01 in this section refer to the parent LMCI-MCH01 and all other references are to other LMCI or LMCV  compliance documents.</xsd:documentation>
@@ -49,7 +48,7 @@
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="A_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="A_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Each system requiring refrigerant charge verification will be documented on a separate certificate.</xsd:documentation>
@@ -113,7 +112,7 @@
                   </xsd:choice>
                   <xsd:element name="A09_IsLiquidLineFilterDrierInstalledToSpec" type="comp:IsLiquidLineFilterDrierInstalledToSpec">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Liquid Line Filter Drier Installed According to Manufacturer's Specifications</xsd:documentation>
+                        <xsd:documentation source="FieldText">Liquid Line Filter Drier Installed According to Manufacturer's Specifications </xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">user selects from Yes or NA.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -130,10 +129,10 @@
                         </xsd:restriction>
                      </xsd:simpleType>
                   </xsd:element>
-                  <xsd:element name="A11_FaultIndicatorDisplayStatus" type="comp:FaultIndicatorDisplayStatus" fixed="FIDStatusNA">
+                  <xsd:element fixed="FIDStatusNA" name="A11_FaultIndicatorDisplayStatus" type="comp:FaultIndicatorDisplayStatus">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Fault Indicator Display (FID) Status (Note: Even systems with a FID must have refrigerant charge verified by installer).</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">This field is fixed value FIDStatusNA display term N/A</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">This field is fixed value FIDStatusNA display term N/A </xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A12_UseMinimumAirflowApprovedVerificationProcedure" type="comp:UseMinimumAirflowApprovedVerificationProcedure">
@@ -144,9 +143,7 @@
                   </xsd:element>
                   <xsd:element name="A13_UseRefrigerantChargeApprovedVerificationProcedure" type="comp:UseRefrigerantChargeApprovedVerificationProcedure">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Is the system of a type that approved refrigerant charge verification procedures can be used to verify compliance with the refrigerant charge verification requirements when temperatures are 
-                           <d:gte/>  55
-                           <d:deg/>F (RA3.2.2, or RA1)?</xsd:documentation>
+                        <xsd:documentation source="FieldText">Is the system of a type that approved refrigerant charge verification procedures can be used to verify compliance with the refrigerant charge verification requirements when temperatures are <d:gte/>  55<d:deg/>F (RA3.2.2, or RA1)?</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User select from list: Boolean true value, display term:  Yes, one of the Refrigerant charge verification procedures from RA3.2.2 or RA1 is applicable to this system and can be used to verify compliance.  and Boolean false value, display term: No, none of the refrigerant charge verification procedures in RA3.2.2, or RA1 are applicable to the system therefore compliance shall use ECC Rater observation of the installer weigh-in charging procedure</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -184,7 +181,7 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_B1" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_B1">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Metering Device Verification for Superheat Method</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == SuperHeat.</xsd:documentation>
@@ -192,7 +189,7 @@ End If</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="Bsh_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="Bsh_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Superheat Method can only be used on systems that do not have a variable metering device.</xsd:documentation>
@@ -213,15 +210,15 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_B2" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_B2">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Metering Device Verification for Subcooling Method</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
+		<xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="Bsc_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="Bsc_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Subcooling Method can only be used on systems that have a variable metering device.</xsd:documentation>
@@ -242,15 +239,15 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_C" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_C">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Instrument Calibration</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod != NewFactoryCharge.</xsd:documentation>
+		<xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod != NewFactoryCharge.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="C_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="C_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for instrument calibration are given in Reference Residential Appendix RA3.2.2 and RA3.2.2.2</xsd:documentation>
@@ -291,14 +288,14 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_D" minOccurs="1">
+         <xsd:element minOccurs="1" name="Section_D">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Measurement Access Hole (MAH) Verification</xsd:documentation>
                <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="D_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="D_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for installing MAH are specified in Reference Residential Appendix RA3.2.2.3</xsd:documentation>
@@ -322,7 +319,7 @@ Else user selects from list MAH_InstalledAsRequired display text:  MAH installed
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_E" minOccurs="1">
+         <xsd:element minOccurs="1" name="Section_E">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Minimum System Airflow Rate Verification</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">All references to the MCH-01 in this section refer to the parent LMCI-MCH-01 and all other references are to other LMCI compliance documents.  
@@ -331,7 +328,7 @@ Require 1 row of data for each indoor unit listed in the "Verification Requireme
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="E_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="E_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for verifying minimum system airflow are specified in Reference Residential Appendix RA3.3.3.</xsd:documentation>
@@ -343,7 +340,7 @@ Require 1 row of data for each indoor unit listed in the "Verification Requireme
                      </xsd:annotation>
                      <xsd:complexType>
                         <xsd:sequence>
-                           <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
+                           <xsd:element maxOccurs="unbounded" minOccurs="1" name="Row">
                               <xsd:complexType>
                                  <xsd:sequence>
                                     <xsd:element name="E01_IndoorUnitName" type="hvac:IndoorUnitName">
@@ -398,7 +395,7 @@ End If</xsd:documentation>
                                           <xsd:restriction base="comp:MinimumAirflowRateVerificationStatus">
                                              <xsd:enumeration value="SystemComplies"/>
                                              <xsd:enumeration value="SystemCompliesUsingAlternativeRemedialActions"/>
-                                             <xsd:enumeration value="SystemCompliesUsingObservationOfWeighIn"/>
+         				     <xsd:enumeration value="SystemCompliesUsingObservationOfWeighIn"/>
                                              <xsd:enumeration value="SystemCompliesUsingTable150BC"/>
                                              <xsd:enumeration value="SystemDoesNotComplyLMCIMCH23Required"/>
                                              <xsd:enumeration value="SystemDoesNotComplyLMCIMCH28Required"/>
@@ -417,7 +414,7 @@ End If</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field:  If all indoor units listed in E01 have E03 == SystemCompliesUsingTable150BC Or SystemComplies Or SystemCompliesUsingAlternativeRemedialActions or SystemCompliesUsingObservationOfWeighIn result = true display term SC System complies with Minimum System Airflow Rate Verification; Else result = false display term SC System does not comply with Minimum System Airflow Rate Verification   and do not allow this Mch-25 to be registered.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="E04a_SectionComments" type="comp:SectionComments" minOccurs="0">
+                  <xsd:element minOccurs="0" name="E04a_SectionComments" type="comp:SectionComments">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Notes:</xsd:documentation>
                      </xsd:annotation>
@@ -425,15 +422,15 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_F1" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_F1">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Data Collection Superheat Method</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Superheat.</xsd:documentation>
+	       <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Superheat.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="Fsh_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="Fsh_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for determining Refrigerant Charge using the Standard Charge Verification Procedure are given in Reference Residential Appendix RA3.2.2 and RA3.2.2.2</xsd:documentation>
@@ -441,15 +438,13 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsh01_LowestReturnAirDryBulbTemperature" type="comp:LowestReturnAirDryBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Lowest Return Air Dry-bulb Temperature that Occurred During the Refrigerant Charge Verification Procedure (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Lowest Return Air Dry-bulb Temperature that Occurred During the Refrigerant Charge Verification Procedure (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is  0 to 130.   In order to have a verification that complies, the return air drybulb temperature must remain above 70F during the verification procedure,</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsh02_CondenserEnteringDryBulbTemperature" type="comp:CondenserEnteringDryBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Condenser Air Entering Dry-bulb Temperature (T<d:sub>condenser, db</d:sub>) ((
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Condenser Air Entering Dry-bulb Temperature (T<d:sub>condenser, db</d:sub>) ((<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is  0 to 130</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -461,22 +456,19 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsh04_MeasuredReturnAirDryBulbTemperature" type="comp:MeasuredReturnAirDryBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Return (evaporator entering) Air Dry-bulb Temperature (T<d:sub>return, db</d:sub>) (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Return (evaporator entering) Air Dry-bulb Temperature (T<d:sub>return, db</d:sub>) (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is  0 to 130.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsh05_MeasuredReturnAirWetBulbTemperature" type="comp:MeasuredReturnAirWetBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Return (evaporator entering) Air Wet-bulb Temperature (T<d:sub>return, wb</d:sub>) (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Return (evaporator entering) Air Wet-bulb Temperature (T<d:sub>return, wb</d:sub>) (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is  0 to 130.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsh06_MeasuredSuctionLineTemperature" type="comp:MeasuredSuctionLineTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Suction Line Temperature (T<d:sub>suction</d:sub>) (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Suction Line Temperature (T<d:sub>suction</d:sub>) (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -488,22 +480,19 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsh08_EvaporatorSaturationTemperature" type="comp:EvaporatorSaturationTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Evaporator Saturation Temperature (T<d:sub>evaporator, sat</d:sub>) from Digital Gauge or P-T Table using Line F07 (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Evaporator Saturation Temperature (T <d:sub>evaporator, sat</d:sub>) from Digital Gauge or P-T Table using Line F07 (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsh09_MeasuredSuperheat" type="comp:MeasuredSuperheat">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Superheat (Line F06 - Line F08) (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Superheat (Line F06 - Line F08) (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Report result of Fsh06_MeasuredSuctionLineTemperature minus Fsh08_EvaporatorSaturationTemperature</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsh10_TargetSuperheat" type="comp:TargetSuperheat">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Target Superheat (from Table RA3.2-2, using F02 and F05) (
-                           <d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Target Superheat (from Table RA3.2-2, using F02 and F05) (<d:deg/> F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is 0 to 50</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -516,15 +505,15 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_F2" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_F2">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Data Collection and Calculations for Subcooling Method</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
+	       <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="Fsc_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="Fsc_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for determining Refrigerant Charge using the Standard Charge Verification Procedure are given in Reference Residential Appendix RA3.2.2.</xsd:documentation>
@@ -532,8 +521,7 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsc01_LowestReturnAirDryBulbTemperature" type="comp:LowestReturnAirDryBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Lowest Return Air Dry Bulb Temperature that Occurred During the Refrigerant Charge Verification Procedure (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Lowest Return Air Dry Bulb Temperature that Occurred During the Refrigerant Charge Verification Procedure (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is  0 to 130.   In order to have a verification that complies, the return air drybulb temperature must remain above 70F during the verification procedure,</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -551,8 +539,7 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsc04_MeasuredLiquidLineTemperature" type="comp:MeasuredLiquidLineTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Liquid Line Temperature (T<d:sub>liquid</d:sub>) (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Liquid Line Temperature (T<d:sub>liquid</d:sub>) (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -564,22 +551,19 @@ End If</xsd:documentation>
                   </xsd:element>
                   <xsd:element name="Fsc06_CondenserSaturationTemperature" type="comp:CondenserSaturationTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Condenser Saturation Temperature (T<d:sub>condenser, sat</d:sub>) from Digital Gauge or P-T Table using Line F05 (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Condenser Saturation Temperature (T<d:sub>condenser, sat</d:sub>) from Digital Gauge or P-T Table using Line F05 (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsc07_MeasuredSubcooling" type="comp:MeasuredSubcooling">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Subcooling (Line F06 - Line F04 (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Subcooling (Line F06 - Line F04 (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Report result of Fsc06_CondenserSaturationTemperature minus Fsc04_MeasuredLiquidLineTemperature</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="Fsc08_TargetSubcooling" type="comp:TargetSubcooling">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Target Subcooling from Manufacturer (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Target Subcooling from Manufacturer (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is 0 to 50</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -593,15 +577,15 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_G" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_G">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Metering Device Verification</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
+	       <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == Subcooling.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="G_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="G_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for the verification of proper metering device operation are specified in RA3.2.2.6.2</xsd:documentation>
@@ -609,8 +593,7 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                   </xsd:element>
                   <xsd:element name="G01_MeasuredSuctionLineTemperature" type="comp:MeasuredSuctionLineTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Suction Line Temperature (T<d:sub>suction</d:sub>) (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Suction Line Temperature (T<d:sub>suction</d:sub>) (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -622,23 +605,19 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                   </xsd:element>
                   <xsd:element name="G03_EvaporatorSaturationTemperature" type="comp:EvaporatorSaturationTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Evaporator Saturation Temperature (T<d:sub>evaporator, sat</d:sub>) from Digital Gauge or P-T Table using Line G02 (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Evaporator Saturation Temperature (T<d:sub>evaporator, sat</d:sub>) from Digital Gauge or P-T Table using Line G02 (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">User input numeric; Range for this value is -40 to 150</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="G04_MeasuredSuperheat" type="comp:MeasuredSuperheat">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Superheat (Line G01- Line G03) (
-                           <d:deg/>F)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Superheat (Line G01- Line G03) (<d:deg/>F)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Report result of G01_MeasuredSuctionLineTemperature minus G03_EvaporatorSaturationTemperature</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="G05_IsMeasuredSuperheatWithinCEC_Range" type="comp:IsMeasuredSuperheatWithinCEC_Range">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Superheat (Line G04)  is between 4
-                           <d:deg/>F and 25
-                           <d:deg/>F (inclusive)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Superheat (Line G04)  is between 4<d:deg/>F and 25<d:deg/>F (inclusive)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">If G04_MeasuredSuperheat is within the range of 4 deg F minimum inclusive and 25 deg F maximum inclusive then result is true. For Boolean true value display text: Measured Superheat passes CEC requirement.  Else result is false.  For Boolean false value display text: Measured Superheat does not pass CEC requirement</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
@@ -657,7 +636,7 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_H" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_H">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Weigh In Charge Procedure</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == WeighIn Or WeighInObservation.</xsd:documentation>
@@ -665,7 +644,7 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="H_BeginNote1" minOccurs="0">
+                  <xsd:element minOccurs="0" name="H_BeginNote1">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">Procedures for Refrigerant Charge using the Weigh-in Charging Procedure are given in Reference Residential Appendix RA3.2.2.2 and RA3.2.3</xsd:documentation>
@@ -673,11 +652,8 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                   </xsd:element>
                   <xsd:element name="H01_CondenserEnteringDryBulbTemperature" type="comp:CondenserEnteringDryBulbTemperature">
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Measured Condenser Air Entering Dry-bulb Temperature (T<d:sub>condenser, db</d:sub>) ((
-                           <d:deg/> F)</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">User input numeric value xxx.x, check range = 0 to 130;  If all of the following condiitons are true:  A12 equals yes, A13 equals yes and A15 equals  WeighInObservation And value entered is greater than or equal to 55 degrees F,  Then display message:  "For this system, compliance using Weigh-In with ECC Rater observation is allowed only when outside temperature is 
-                           <d:lt/> 55
-                           <d:deg/> F."   (Do Not Proceed, do not allow this document to be registered)</xsd:documentation>
+                        <xsd:documentation source="FieldText">Measured Condenser Air Entering Dry-bulb Temperature (T<d:sub>condenser, db</d:sub>) ((<d:deg/> F)</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User input numeric value xxx.x, check range = 0 to 130;  If all of the following condiitons are true:  A12 equals yes, A13 equals yes and A15 equals  WeighInObservation And value entered is greater than or equal to 55 degrees F,  Then display message:  "For this system, compliance using Weigh-In with ECC Rater observation is allowed only when outside temperature is <d:lt/> 55<d:deg/> F."   (Do Not Proceed, do not allow this document to be registered)</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="H02_RefrigerantChargeWeighInMethod" type="comp:RefrigerantChargeWeighInMethod">
@@ -695,7 +671,7 @@ For Boolean true display text System Refrigerant Charge Passes by Subcooling Met
                            <xsd:documentation source="FieldText">Manufacturer Standard Charge for Condenser (lbs, oz.)</xsd:documentation>
                         </xsd:annotation>
                      </xsd:element>
-                     <xsd:element name="H03_ManufacturerStandardCondenserChargeOz" type="comp:ManufacturerStandardCondenserChargeOz" maxOccurs="1">
+                     <xsd:element maxOccurs="1" name="H03_ManufacturerStandardCondenserChargeOz" type="comp:ManufacturerStandardCondenserChargeOz">
                         <xsd:annotation>
                            <xsd:documentation source="FieldText">Manufacturer Standard Charge for Condenser (lbs, oz.)</xsd:documentation>
                            <xsd:documentation source="CalculationsAndRules">Range for lbs is 0 to 50  Range for oz is 0 to 15</xsd:documentation>
@@ -787,105 +763,100 @@ Else result = false.  For Boolean false value display term: System does not comp
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_I" minOccurs="0">
+         <xsd:element minOccurs="0" name="Section_I">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Weigh In Charge Procedure - Additional Requirements</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == WeighIn Or WeighInObservation.</xsd:documentation>
-               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
-            </xsd:annotation>
+	       <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == WeighIn Or WeighInObservation.</xsd:documentation>
+	       <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation> 
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="I01" minOccurs="0">
+                  <xsd:element minOccurs="0" name="I01">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Brazing of Refrigerant Lines</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">If refrigerant line connections require welding, the system is braised with dry nitrogen in lines and indoor coil</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="I02" minOccurs="0">
+                  <xsd:element minOccurs="0" name="I02">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Prior to Introducing Refrigerant</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">
-                           <d:tab1/> i. In all cases where the OEM instructions call for checking gas leaks with vacuum, prior to introducing refrigerant, system is evacuated to 500 microns or less and, when isolated, has risen no more than 300 microns after 5 minutes.
-                           <d:line1>
-d:tab1/] In all cases where the OEM instructions call for checking gas leaks with nitrogen gas, the system was pressurized to the manufacturer's specified  pressure and if the pressure could not be maintained, leaks were located and fixed.</d:line1>
-                        </xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements"><d:tab1/> i. In all cases where the OEM instructions call for checking gas leaks with vacuum, prior to introducing refrigerant, system is evacuated to 500 microns or less and, when isolated, has risen no more than 300 microns after 5 minutes.<d:line1/>
+<d:tab1/> In all cases where the OEM instructions call for checking gas leaks with nitrogen gas, the system was pressurized to the manufacturer's specified  pressure and if the pressure could not be maintained, leaks were located and fixed.</xsd:documentation>
                      </xsd:annotation>
-                     <xsd:element name="I03" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Prior to Introducing Refrigerant</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">Observation and documentation of the vacuum and pressurization tests are not required if no fittings (other than the fitting to the compressor) are compression or flare fittings</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="I04" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Lineset Adjustment</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The calculated weight adjustment for lineset length is based on the length and diameter of the lineset</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="I05" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Coil Adjustment</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The calculated weight adjustment for coil size is based on manufacturer instructions.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="I06" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Total Adjustment</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The actual total weight adjustment is equal to the sum of the calculated weight adjustment for lineset and coil size.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="I07" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Total Weight Refrigerant</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The calculated and actual total weights of refrigerant in the system are recorded on or near the nameplate label in indelible ink or other permanent means.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="I08" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Installer agrees to return to correct refrigerant charge</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">When applicable and if necessary to avoid delay of approval of dwelling units completed when outside temperatures are below 55
-                              <d:deg/>F, the enforcement agency may approve compliance with the refrigerant charge verification requirements based on registration of this LMCI-MCH-25, documenting use of the RA3.2.3.1 HVAC Installer Weigh-In Charging Procedure when the optional Section RA3.2.3.2 ECC Rater Observation of Weigh-In Charging Procedure is not used.  As condition for such enforcement agency approval, the responsible person's signature on this compliance document affirms the installer agrees to return to correct refrigerant charge if a ECC Rater determines at a later time, when the outside temperature is 55
-                              <d:deg/>F or greater, that refrigerant charge correction is necessary.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="IEndNote1" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I03">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Prior to Introducing Refrigerant</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Observation and documentation of the vacuum and pressurization tests are not required if no fittings (other than the fitting to the compressor) are compression or flare fittings</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I04">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Lineset Adjustment</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The calculated weight adjustment for lineset length is based on the length and diameter of the lineset</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I05">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Coil Adjustment</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The calculated weight adjustment for coil size is based on manufacturer instructions.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I06">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Total Adjustment</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The actual total weight adjustment is equal to the sum of the calculated weight adjustment for lineset and coil size.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I07">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Total Weight Refrigerant</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The calculated and actual total weights of refrigerant in the system are recorded on or near the nameplate label in indelible ink or other permanent means.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="I08">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Installer agrees to return to correct refrigerant charge</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">When applicable and if necessary to avoid delay of approval of dwelling units completed when outside temperatures are below 55<d:deg/>F, the enforcement agency may approve compliance with the refrigerant charge verification requirements based on registration of this LMCI-MCH-25, documenting use of the RA3.2.3.1 HVAC Installer Weigh-In Charging Procedure when the optional Section RA3.2.3.2 ECC Rater Observation of Weigh-In Charging Procedure is not used.  As condition for such enforcement agency approval, the responsible person's signature on this compliance document affirms the installer agrees to return to correct refrigerant charge if a ECC Rater determines at a later time, when the outside temperature is 55<d:deg/>F or greater, that refrigerant charge correction is necessary.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="IEndNote1">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+                     </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
             </xsd:complexType>
-            <xsd:element name="Section_J" minOccurs="0">
-               <xsd:annotation>
-                  <xsd:documentation source="FieldText">Verification of New Package Unit Factory Charge</xsd:documentation>
-                  <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == NewFactoryCharge .</xsd:documentation>
-                  <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
-               </xsd:annotation>
-               <xsd:complexType>
-                  <xsd:sequence>
-                     <xsd:element name="J_BeginNote1" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">Note: There is no ECC verification requirement for a New package unit factory charge. The Enforcement Agency has responsibility for verification in this case.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                     <xsd:element name="J01" minOccurs="0">
-                        <xsd:annotation>
-                           <xsd:documentation source="FieldText">Responsible Persons Signature</xsd:documentation>
-                           <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this document affirms that this new package unit has correct refrigerant charge as provided by the manufacturer prior to shipment from the factory, and no modifications have been made to this packaged unit that would result in a change to the amount of refrigerant in the unit.</xsd:documentation>
-                        </xsd:annotation>
-                     </xsd:element>
-                  </xsd:sequence>
-               </xsd:complexType>
-            </xsd:element>
+         </xsd:element>
+         <xsd:element minOccurs="0" name="Section_J">
+            <xsd:annotation>
+               <xsd:documentation source="FieldText">Verification of New Package Unit Factory Charge</xsd:documentation>
+	       <xsd:documentation source="CalculationsAndRules">This section is required if A15 RefrigerantChargeVerificationMethod == NewFactoryCharge .</xsd:documentation>
+	       <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+            </xsd:annotation>  
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element minOccurs="0" name="J_BeginNote1">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">Note: There is no ECC verification requirement for a New package unit factory charge. The Enforcement Agency has responsibility for verification in this case.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="J01">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Responsible Persons Signature</xsd:documentation>
+                        <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this document affirms that this new package unit has correct refrigerant charge as provided by the manufacturer prior to shipment from the factory, and no modifications have been made to this packaged unit that would result in a change to the amount of refrigerant in the unit.</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
+               </xsd:sequence>
+            </xsd:complexType>
          </xsd:element>
       </xsd:sequence>
-      <xsd:element name="lMCIMCH25H" type="LMCIMCH25H">
-         <xsd:annotation>
-            <xsd:documentation>This element contains all of the data and text required to generate the LMCIMCH25H compliance report.</xsd:documentation>
-         </xsd:annotation>
-      </xsd:element>
    </xsd:complexType>
+   <xsd:element name="lMCIMCH25H" type="LMCIMCH25H">
+      <xsd:annotation>
+         <xsd:documentation>This element contains all of the data and text required to generate the LMCIMCH25H compliance report.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
 </xsd:schema>
