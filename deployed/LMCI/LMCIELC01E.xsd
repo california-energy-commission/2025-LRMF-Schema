@@ -1,0 +1,354 @@
+<xsd:schema xmlns="http://www.lmonte.com/besm/LMCIELC01E" xmlns:d="http://www.lmonte.com/besm/d" xmlns:bld="http://www.lmonte.com/besm/bld" xmlns:env="http://www.lmonte.com/besm/env" xmlns:lit="http://www.lmonte.com/besm/lit" xmlns:hvac="http://www.lmonte.com/besm/hvac" xmlns:comp="http://www.lmonte.com/besm/comp" xmlns:com="http://www.lmonte.com/besm/com" xmlns:dtyp="http://www.lmonte.com/besm/dtyp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.lmonte.com/besm/LMCIELC01E" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2025.0.000">
+  <xsd:import namespace="http://www.lmonte.com/besm/com" schemaLocation="../base/ResCommon.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/bld" schemaLocation="../base/ResBuilding.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/env" schemaLocation="../base/ResEnvelope.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/lit" schemaLocation="../base/ResLighting.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/hvac" schemaLocation="../base/ResHvac.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/comp" schemaLocation="../base/ResCompliance.xsd"/>
+  <xsd:import namespace="http://www.lmonte.com/besm/dtyp" schemaLocation="../base/DataTypes.xsd"/>
+  <xsd:element name="ComplianceDocumentPackage">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="DocID" minOccurs="0">
+          <xsd:complexType>
+            <xsd:attribute name="doc" type="comp:ComplianceDocumentTag" fixed="LMCIELC01E"/>
+            <xsd:attribute name="docType" type="comp:ComplianceDocumentType" fixed="CERTIFICATE OF INSTALLATION"/>
+            <xsd:attribute name="docTitle" type="comp:ComplianceDocumentTitleRes" fixed="Electric Ready Requirements"/>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Payload" type="comp:Payload"/>
+        <xsd:element name="DocumentData">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Header" type="comp:HeaderHERS"/>
+              <xsd:element ref="lMCIELC01E"/>
+              <xsd:element name="DocAuthor" type="comp:DocumentAuthor"/>
+              <xsd:element name="RespPerson" type="comp:ResponsiblePersonCF2R_E"/>
+              <xsd:element name="Footer" type="comp:Footer"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Report" type="xsd:base64Binary"/>
+      </xsd:sequence>
+      <xsd:attribute name="revision" use="required" type="xsd:string" fixed="rev 20250101"/>
+      <xsd:attribute name="doc" use="required" type="comp:ComplianceDocumentTag" fixed="LMCIELC01E"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="LMCIELC01E">
+    <xsd:annotation>
+      <xsd:documentation>Electric Ready Requirements</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Section_A" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">General Information</xsd:documentation>
+          <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="A01_ElectricReadyScopeMF" type="comp:ElectricReadyScopeMF" maxOccurs="unbounded">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText">Project Scope</xsd:documentation>
+                <xsd:documentation source="CalculationsAndRules">User selects all that apply: ReadyHeatingHP, ReadyElecCooktop, ReadyElecDryer, ReadyElecDryerCommon Or select ReadyElecNA if building is all-electric</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_B" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Heat Pump Space Heater Ready</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyHeatingHP</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Htp01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A dedicated 240 volt branch circuit wiring shall be installed within 3 feet from the furnace and accessible to the furnace with no obstructions.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Htp02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The branch circuit conductors shall be rated at 30 amps minimum.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Htp03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The blank cover shall be identified as "240V ready".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Htp04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">All electrical components shall be installed in accordance with the <d:i>California Electrical Code</d:i></xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Htp05" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The main electrical service panel shall have a reserved space to allow for the installation of a double pole circuit breaker for a future heat pump space heater installation.  The reserved space shall be permanently marked as "For Future 240V use".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="HtpEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_C" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Electric Cooktop Ready</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyElecCooktop</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cook01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A dedicated 240 volt branch circuit wiring shall be installed within 3 feet from the cooktop and accessible to the cooktop with no obstructions.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cook02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The branch circuit conductors shall be rated at 50 amps minimum.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cook03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The blank cover shall be identified as "240V ready".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cook04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">All electrical components shall be installed in accordance with the <d:i>California Electrical Code</d:i></xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cook05" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The main electrical service panel shall have a reserved space to allow for the installation of a double pole circuit breaker for a future electric cooktop installation.  The reserved space shall be permanently marked as "For Future 240V use".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CookEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_D" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Electric Clothes Dryer Ready - Systems Serving Individual Dwelling Units</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyElecDryer or ReadyElecDryerCommon</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Dry01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A dedicated 240 volt branch circuit wiring shall be installed within 3 feet from the clothes dryer location and accessible to the clothes dryer location with no obstructions.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Dry02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The branch circuit conductors shall be rated at 30 amps minimum.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Dry03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The blank cover shall be identified as "240V ready".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Dry04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">All electrical components shall be installed in accordance with the <d:i>California Electrical Code</d:i></xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Dry05" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The main electrical service panel shall have a reserved space to allow for the installation of a double pole circuit breaker for a future electric clothes dryer installation.  The reserved space shall be permanently marked as "For Future 240V use".</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="DryEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_E" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Electric Clothes Dryer Ready - Systems in Common Areas</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyElecDryerCommon</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Cdry01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Conductors or raceway shall be installed with termination points at the main electrical panel, via subpanels panels if applicable, to a location no more than 3 feet from each gas outlet or a designated location of future electric replacement equipment. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cdry02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Both ends of the conductors or raceway shall be labelled "Future 240V Use."</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cdry03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Capacity shall be one of the following: <d:line1/><d:tab1/>i.	24 amps at 208/240 volts per clothes dryer; <d:line1/><d:tab1/> ii.	6 kVA for each 10,000 Btu per hour of rated gas input or gas pipe capacity; or <d:line1/><d:tab1/>iii.	The electrical power required to provide equivalent functionality of the gas-powered equipment as calculated and documented by the responsible person associated with the project.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Cdry04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The capacity requirements may be adjusted for demand factors in accordance with the California Electric Code. Gas flow rates shall be determined in accordance with the California Plumbing Code.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="CdryEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_F" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Individual Heat Pump Water Heater Ready</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyIndividualHPWH</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Hpwh01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A dedicated 125 volt, 20 amp electrical receptacle that is connected to the electric panel with a 120/240 volt 3 conductor branch circuit rated to 30 amps minimum, within 3 feet from the water heater and accessible to the water heater with no obstructions. In addition, all the following:
+<d:line1/>A. Both ends of the unused conductor shall be labeled with the word "spare" and be electrically isolated; and <d:line1/>B. A reserved single pole circuit breaker space in the electrical panel adjacent to the circuit breaker for the branch circuit in A above and labeled with the words "Future 240V Use"; and </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Hpwh02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A condensate drain that is no more than 2 inches higher than the base of the installed water heater, and allows natural draining without pump assistance, and</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Hpwh03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The construction drawings shall designate a space at least 39 inches by 39 inches and 96 inches tall for the future location of heat pump water heater.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Hpwh04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A ventilation method meeting one of the following: <d:line1/> A. The designated space for the future heat pump water heater shall have a minimum volume of 700 cubic feet; or <d:line1/>
+B. If the future HPWH space is designed to vent indoors, the designated space for the future heat pump water heater shall vent to a communicating space in the same pressure boundary. The total combined volume connected shall be 700 cubic feet or larger and vent to the interior via:
+<d:line1/> i. Fully louvered doors with fixed louvers consisting of a single layer of fixed flat slats and a minimum total NFA of 250 square inches; or <d:line1/> ii. Two permanent openings of equal area with a minimum total NFA of 250 square inches located within 12 inches from the enclosure top and bottom; or <d:line1/> iii Two 8-inch ducts to a communicating space.
+<d:line1/> C. If the future HPWH space is designed to vent indoors, the designated space for the future heat pump water heater shall vent to a communicating space in the same pressure boundary. The total combined volume connected shall be 700 cubic feet or larger and vent to the interior via:
+<d:line1/>i. Fully louvered doors with fixed louvers consisting of a single layer of fixed flat slats and a minimum total NFA of 250 square inches; or <d:line1/> ii. Two permanent openings of equal area with a minimum total NFA of 250 square inches located within 12 inches from the enclosure top and bottom; or 
+<d:line1/> iii. Two 8 inches capped ducts. All ducts that cross the pressure boundary shall be insulated to a minimum insulation level of R-6 and the ducts, connections, and building penetrations shall be sealed. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="HpwhEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_G" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Central Heat Pump Water Heater Ready</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ElectricReadyScopeMF includes ReadyCentralHPWH</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Chpwh01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The system input capacity of the gas or propane water heating system shall be determined as the sum of the input gas or propane capacity of all water heating devices associated with each gas or propane water heating system.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Chpwh02" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Space reserved shall include: <d:line1/> A. Heat Pump. The minimum space reserved shall include space for service clearances and air flow clearances and shall meet one of the following: 
+<d:line1/><d:tab1/> i. The space reserved shall be the space required for a heat pump water heater system that meets the total building hot water demand as calculated and documented by the responsible person associated with the project; or 
+<d:line1/><d:tab1/> ii. The space reserved shall meet the requirements specified in Joint Appendix JA15.2.1. <d:line1/>B. Tanks. The minimum space reserved shall include space for service clearances and shall meet one of the following: 
+<d:line1/><d:tab1/> i. The space reserved shall be the space required for a heat pump water heater system that meets the total building hot water demand as calculated and documented by the responsible person associated with the project; or 
+<d:line1/><d:tab1/> ii. The space reserved shall meet the requirements specified in Joint Appendix JA15.2.2.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Chpwh03" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Ventilation shall be provided by meeting one of the following: <d:line1/> A. Physical space reserved for the heat pump shall be located outside; or 
+<d:line1/> B. A pathway shall be reserved for future routing of supply and exhaust air via ductwork from the reserved heat pump location to a suitable outdoor location. Penetrations through the building envelope for louvers and ducts shall be planned and identified for future use. 
+The reserved pathway and penetrations through the building envelope shall be sized to meet one of the following: <d:line1/><d:tab1/> i. The reserved pathway and penetrations shall be sized to serve a heat pump water heater system that meets the total building hot water demand as calculated and documented by the responsible person associated with the project. 
+<d:line1/><d:tab1/> ii. The reserved pathway and penetrations shall be sized to meet the requirements specified in Joint Appendix JA15.2.3.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Chpwh04" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Condensate drainage piping. An approved receptacle that is sized per the California Plumbing Code for condensate drainage shall be installed within 3 feet of the reserved heat pump location, or piping shall be installed from within 3 feet of the reserved heat pump location to an approved discharge location that is sized in accordance with the California Plumbing Code, and meet one of the following: 
+<d:line1/><d:tab1/> i. Condensate drainage shall be sized to serve a heat pump water heater system that meets the total building hot water demand as calculated and documented by the responsible person associated with the project. <d:line1/><d:tab1/> ii. Condensate drainage piping shall be sized to meet the requirements specified in Joint Appendix JA15.2.4.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Chpwh05" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">Electrical <d:line1/> A. Physical space shall be reserved on the bus system of the main switchboard or on the bus system of a distribution board to serve the future heat pump water heater system including the heat pump and temperature maintenance tanks. 
+In addition, the physical space reserved shall be capable of providing adequate power to the future heat pump water heater in accordance with the following: <d:line1/><d:tab1/> i. Heat Pump. Meet one of the following. 
+<d:line1/><d:tab2/> A. The electrical power required to power a heat pump water heater system heat pump that meets the total building hot water demand as calculated and documented by the responsible person associated with the project. 
+<d:line1/><d:tab2/> B. The electrical power required that meets the requirements specified for the heat pump in Joint Appendix JA15.2.5. <d:line1/><d:tab1/> ii. Temperature Maintenance Tank. Meet one of the following. 
+<d:line1/><d:tab2/> A. The electrical power required to power a heat pump water heater system temperature maintenance tank that meets the total building hot water demand as calculated and documented by the responsible person associated with the project. 
+<d:line1/><d:tab2/> B. The electrical power required that meets the requirements specified for the temperature maintenance tank in Joint Appendix JA15.2.5. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ChpwhEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="lMCIELC01E" type="LMCIELC01E">
+    <xsd:annotation>
+      <xsd:documentation>This element contains all of the data and text required to generate the LMCIELC01E compliance report.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>
