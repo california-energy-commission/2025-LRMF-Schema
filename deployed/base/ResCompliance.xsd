@@ -11858,6 +11858,15 @@
     <xsd:restriction base="xsd:boolean">
       </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="JA13CompliantHPWH">
+    <xsd:annotation>
+      <xsd:appinfo source="displayterm">
+        <dtyp:displayterm value="true">Yes</dtyp:displayterm>
+        <dtyp:displayterm value="false">No</dtyp:displayterm>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
   <xsd:simpleType name="JAName">
     <xsd:annotation>
       <xsd:documentation>The reference in the Joint Appendices for an applied rule, usually a lookup value from a table.</xsd:documentation>

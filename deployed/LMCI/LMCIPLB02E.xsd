@@ -387,6 +387,12 @@ End If</xsd:documentation>
                             <xsd:documentation source="CalculationsAndRules">If prescriptive, this field is not required; Else If performance reference values from XML   This field IS NOT part of the printed report and is not displayed to the user.  It is used for equivalency lookup</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
+                        <xsd:element name="A2hp10_JA13CompliantHPWH" type="comp:JA13CompliantHPWH">
+                          <xsd:annotation>
+                            <xsd:documentation source="FieldText">JA13 Compliant</xsd:documentation>
+                            <xsd:documentation source="CalculationsAndRules">Reference values from LMCC-PRF Else user selects from list Yes (true) and No (false) </xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
                       </xsd:sequence>
                     </xsd:complexType>
                   </xsd:element>
@@ -1258,6 +1264,12 @@ End If</xsd:documentation>
                             </xsd:annotation>
                           </xsd:element>
                         </xsd:choice>
+                        <xsd:element name="B2hp09_JA13CompliantHPWH" type="comp:JA13CompliantHPWH">
+                          <xsd:annotation>
+                            <xsd:documentation source="FieldText">JA13 Compliant</xsd:documentation>
+                            <xsd:documentation source="CalculationsAndRules">Reference value from A2hp10_JA13CompliantHPWH </xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
                       </xsd:sequence>
                     </xsd:complexType>
                   </xsd:element>
@@ -1657,9 +1669,11 @@ Check:  If result != C06 flag as non-compliant and do not allow doc to be regist
             <xsd:element name="F05" minOccurs="0">
               <xsd:annotation>
                 <xsd:documentation source="FieldText"/>
-                <xsd:documentation source="AdditionalRequirements"><d:b>Domestic hot water piping insulation requirements</d:b>: See the Exceptions to Section 160.4(e)): <d:line1/><d:b>1. General Requirements</d:b>:<d:l t="a"><d:list>The first 8 feet of inlet cold water piping from the storage tankis, including piping between a storage tank and a heat trap shall be insulated. </d:list><d:list> Insulation on the piping and domestic hot water system appurtenances shall be continuous. </d:list><d:list> Pipe supports, hangers, and pipe clamps shall be attached on the outside of rigid pipe insulation to prevent thermal bridges. </d:list><d:list> All pipe insulation seams shall be sealed. </d:list><d:list> Insulation for pipe elbows shall be mitered, preformed, or site fabricated with PVC covers.  </d:list><d:list> Insulation for tees shall be notched, preformed, or site fabricated with PVC covers.</d:list><d:list> Extended stem isolation valves shall be installed.
+                <xsd:documentation source="AdditionalRequirements"><d:b>Domestic hot water piping insulation requirements</d:b>: See the Exceptions to Section 160.4(e)): <d:line1/> <d:b>1. General Requirements</d:b>:<d:l t="a"><d:list>The first 8 feet of inlet cold water piping from the storage tankis, including piping between a storage tank and a heat trap shall be insulated. </d:list><d:list> Insulation on the piping and domestic hot water system appurtenances shall be continuous. </d:list><d:list> Pipe supports, hangers, and pipe clamps shall be attached on the outside of rigid pipe insulation to prevent thermal bridges. </d:list><d:list> All pipe insulation seams shall be sealed. </d:list><d:list> Insulation for pipe elbows shall be mitered, preformed, or site fabricated with PVC covers.  </d:list><d:list> Insulation for tees shall be notched, preformed, or site fabricated with PVC covers.</d:list><d:list> Extended stem isolation valves shall be installed.
 </d:list><d:list>All plumbing appurtenances on hot water piping from a heating source to heating plant, at the heating plant, and distribution supply and return piping shall be insulated to meet the following requirements: <d:line1/><d:tab1/>i. Where the outer diameter of the appurtenance is less than the outer diameter of the insulated pipe that it is attached to, the appurtenance shall be insulated flush with the insulation surrounding the pipe. 
-<d:line1/><d:tab1/>ii. Where the outer diameter of the appurtenance is greater than the outer diameter of the insulated pipe that it is attached to, the appurtenance shall be insulated with a minimum thickness of 1 inch. <d:line1/><d:tab1/>iii. The insulation shall be removable and re-installable to ensure maintenance or replacement services can be completed.<d:line1/><d:tab1/>iv. Valves shall be fully functional without impediment from the insulation. </d:list></d:l><d:line1/><d:b>2. Insulation Thickness</d:b>: All piping for multifamily domestic hot water systems shall meet the insulation thickness requirements specified in Table 160.4-A <d:l t="a"><d:list>For insulation conductivity in the range shown in Table 160.4-A for the applicable fluid temperature range, the insulation shall have the applicable minimum thickness or R-value shown in Table 160.4-A.</d:list><d:list>If the insulation conductivity falls outside the range provided in Table 160.4-A applicable fluid temperature range, the insulation shall meet a minimum R-value as indicated in Table 160.4-A. Or, it can have a thickness determined using Equation 160.4-A.</d:list><d:list>Insulation conductivity shall be determined in accordance with ASTM C335 at the mean temperature listed in Table 160.4-A, and shall be rounded to the nearest 1/100 Btu-inch per hour per square foot per <d:deg/>F.</d:list></d:l><d:line1/><d:b>3. Insulation Protection</d:b>: Pipe Insulation shall be protected from damage due to sunlight, moisture, equipment maintenance and wind. Protection shall, at minimum, include the following: <d:l t="a"><d:list> Pipe and appurtenance insulation exposed to weather shall be protected by a cover suitable for outdoor service. The cover shall be water retardant and provide shielding from solar radiation that can cause degradation of the material. Appurtenance insulation covers shall be removable and able to be reinstalled. Adhesive tape shall not be used to provide this protection. </d:list><d:list> Pipe insulation covering chilled water piping and refrigerant suction piping located outside the conditioned space shall include, or be protected by, a Class I or Class II vapor retarder. All penetrations and joints shall be sealed. </d:list><d:list> Pipe insulation buried below grade must be installed in a waterproof and noncrushable casing or sleeve. </d:list></d:l></xsd:documentation>
+<d:line1/><d:tab1/>ii. Where the outer diameter of the appurtenance is greater than the outer diameter of the insulated pipe that it is attached to, the appurtenance shall be insulated with a minimum thickness of 1 inch. <d:line1/><d:tab1/>iii. The insulation shall be removable and re-installable to ensure maintenance or replacement services can be completed.<d:line1/><d:tab1/>iv. Valves shall be fully functional without impediment from the insulation. </d:list></d:l>
+<d:line1/> <d:b>2. Insulation Thickness</d:b>: All piping for multifamily domestic hot water systems shall meet the insulation thickness requirements specified in Table 160.4-A <d:l t="a"><d:list>For insulation conductivity in the range shown in Table 160.4-A for the applicable fluid temperature range, the insulation shall have the applicable minimum thickness or R-value shown in Table 160.4-A.</d:list><d:list>If the insulation conductivity falls outside the range provided in Table 160.4-A applicable fluid temperature range, the insulation shall meet a minimum R-value as indicated in Table 160.4-A. Or, it can have a thickness determined using Equation 160.4-A.</d:list><d:list>Insulation conductivity shall be determined in accordance with ASTM C335 at the mean temperature listed in Table 160.4-A, and shall be rounded to the nearest 1/100 Btu-inch per hour per square foot per <d:deg/>F.</d:list></d:l>
+<d:line1/> <d:b>3. Insulation Protection</d:b>: Pipe Insulation shall be protected from damage due to sunlight, moisture, equipment maintenance and wind. Protection shall, at minimum, include the following: <d:l t="a"><d:list> Pipe and appurtenance insulation exposed to weather shall be protected by a cover suitable for outdoor service. The cover shall be water retardant and provide shielding from solar radiation that can cause degradation of the material. Appurtenance insulation covers shall be removable and able to be reinstalled. Adhesive tape shall not be used to provide this protection. </d:list><d:list> Pipe insulation covering chilled water piping and refrigerant suction piping located outside the conditioned space shall include, or be protected by, a Class I or Class II vapor retarder. All penetrations and joints shall be sealed. </d:list><d:list> Pipe insulation buried below grade must be installed in a waterproof and noncrushable casing or sleeve. </d:list></d:l> </xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="FEndNote1" minOccurs="0">
@@ -2028,6 +2042,29 @@ End If</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="LEndNote1" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
+                <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Section_M" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation source="FieldText">Qualification Requirements for Heat Pump Water Heater Demand Management Systems (Appendix JA13)</xsd:documentation>
+          <xsd:documentation source="CalculationsAndRules">This section is applicable if A2hp10_JA13CompliantHPWH == true</xsd:documentation>
+          <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="M01" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation source="FieldText"/>
+                <xsd:documentation source="AdditionalRequirements">A thermostatic mixing valve conforming to ASSE 1017 shall be installed on the hot water supply line following all manufacturer installation instructions or the water heater shall conform to UL 60730-1, ASSE 1082, or ASSE 1084.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="MEndNote1" minOccurs="0">
               <xsd:annotation>
                 <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
                 <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
