@@ -100,11 +100,19 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="B02_ResidentialWaterHeatingSystemType" type="hvac:ResidentialWaterHeatingSystemType" >
+                                       <xsd:element name="B02_ResidentialWaterHeatingSystemType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Water Heating System Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Performance, reference values from LMCC-PRF; Allowed values are: DHW display term DHW,  Hydronic display term Hydronic and  HydronicSpaceConditioningDHW display term Combined Hydronic; Else If Prescriptive result = N/A stored in NotApplicableMessage</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Performance, reference values from LMCC-PRF; Allowed values are: DHW display term DHW,  HydronicSpaceConditioningDHW display term Combined Hydronic, Central and Other; Else If Prescriptive result = N/A stored in NotApplicableMessage</xsd:documentation>
                                           </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:ResidentialWaterHeatingSystemType">
+						<xsd:enumeration value="Central"/>
+						<xsd:enumeration value="DHW"/>
+						<xsd:enumeration value="HydronicSpaceConditioningDHW"/>
+						<xsd:enumeration value="Other"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
                                        </xsd:element>
                                        <xsd:element name="B02_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
