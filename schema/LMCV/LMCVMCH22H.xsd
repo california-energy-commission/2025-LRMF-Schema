@@ -281,7 +281,7 @@ Else If loading Row 2 of CFVCS data Then If parent document == MCH-01a Or MCH-01
                         <xsd:documentation source="CalculationsAndRules">Referenced from MCH-23 (make sure to reference tested airflow value and not target airflow value</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="sszC03_FanEfficacyRequired" type="hvac:FanEfficacyRequired" >
+                  <xsd:element name="Cssz03_FanEfficacyRequired" type="hvac:FanEfficacyRequired" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Required Fan Efficacy (watts/cfm)</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field:  If parent document == MCH-01a or MCH01d, then reference its value in C09_MaximumCoolingWperCFM;  Else If parent document == MCH-01b Or Mch01c   If MCH01b- C06 or Mch01c - B05 ResidentialCoolingSystemType  == SmallDuctHighVelocityHP Or SmallDuctHighVelocityAC result = 0.62  Else If  MCH01b - C02 Or Mch01c - B02 ResidentialHeatingSystemType  == CentralGasFurnace Or GasPackagedFurnace result = 0.45 Else result = 0.58</xsd:documentation>
