@@ -94,8 +94,7 @@
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Verified Low Leakage Ducts in Conditioned Space (VLLDCS) Credit from parent CC?</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field using data from parent CC.  
-If performance path, if parent CC's  Y02_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
- result = true 
+If performance path, result = Distmf18_LowLeakageDuctsConditionedVerificationRequired
 Else calculated result depending on parent CC data
 End If
 
@@ -109,8 +108,7 @@ If result == true, display text Section B2 for Low Leakage Ducts in Conditioned 
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Verified Low Leakage Air Handling Unit Credit from parent CC?</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field using data from parent CC.   
-If performance path, if parent CC's   Y02_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
- result = false 
+If performance path, if parent CC's  result = Distmf17_LowLeakageAirHandlingUnitVerificationRequired 
 Else calculated result depending on parent CC data
 End If
 
