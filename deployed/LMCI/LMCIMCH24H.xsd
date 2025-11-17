@@ -195,7 +195,7 @@ Else result = SUM (A10_FloorArea, A11_CeilingArea, A12_ExteriorWallArea, A13_Dwe
             <xsd:element name="A15_BuildingTotalVolume" type="com:BuildingTotalVolume">
               <xsd:annotation>
                 <xsd:documentation source="FieldText">Dwelling Unit Volume</xsd:documentation>
-                <xsd:documentation source="CalculationsAndRules">If performance, reference value from parent CC; Else for prescriptive, user input</xsd:documentation>
+                <xsd:documentation source="CalculationsAndRules">If performance, reference value from parent CC if available Else allow user input; Else for prescriptive, user input</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:choice maxOccurs="1">

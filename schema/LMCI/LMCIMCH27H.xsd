@@ -108,7 +108,7 @@ Else If parent is LMCC-MCH allow user to select from list: NewConstruction displ
                      <xsd:element name="A06_VentilationSystemType">
                         <xsd:annotation>
                            <xsd:documentation source="FieldText">Ventilation System Type</xsd:documentation>
-                           <xsd:documentation source="CalculationsAndRules">if parent is LMCC-PRF, reference data from LMCC-PRF;
+                           <xsd:documentation source="CalculationsAndRules">if parent is LMCC-PRF, reference data from LMCC-PRF if available else allow user input;
                               else if parent is LMCC-MCH allow user to pick one from list:  
                               *Supply
                               *Exhaust;
