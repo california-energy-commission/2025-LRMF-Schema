@@ -153,13 +153,6 @@
                 <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from MCH23</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
-            <xsd:element name="A12_CFVCS_Type" type="comp:CFVCS_Type" minOccurs="0" maxOccurs="0">
-              <xsd:annotation>
-                <xsd:documentation source="FieldText">Central Fan Ventilation Cooling System Status</xsd:documentation>
-                <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from MCH23</xsd:documentation>
-                <xsd:documentation source="MaxOccurs">NOT IMPLEMENTED If maxOccurs = "0"</xsd:documentation>
-              </xsd:annotation>
-            </xsd:element>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
