@@ -227,7 +227,7 @@ Require one row of data in this table for each of the SC Systems identified on t
                         <xsd:element name="B03_ResidentialHeatingSystemType" type="hvac:ResidentialHeatingSystemType" maxOccurs="unbounded">
                           <xsd:annotation>
                             <xsd:documentation source="FieldText">Heating System Type</xsd:documentation>
-                            <xsd:documentation source="CalculationsAndRules">If parent CC-PRF  Hvacdwell03b_ResidentialHeatingSystemType == VCHP, 
+                            <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03b == N/A, allow user to select from list; Else If parent CC-PRF  Hvacdwell03b_ResidentialHeatingSystemType == VCHP, 
 allow user to select from list: VCHP_IndoorUnitDucted,  VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless
 Else  auto fill from parent CC-PRF;   
 End If
@@ -237,7 +237,7 @@ Note: assuming new VCHP  and multisplit system types: VCHP_IndoorUnitDucted, VCH
                         <xsd:element name="B04_ResidentialCoolingSystemType" type="hvac:ResidentialCoolingSystemType" maxOccurs="unbounded">
                           <xsd:annotation>
                             <xsd:documentation source="FieldText">Cooling System Type</xsd:documentation>
-                            <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03b_ResidentialCoolingSystemType == VCHP, 
+                            <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03c == N/A, allow user to select from list; Else If parent CC-PRF Hvacdwell03c_ResidentialCoolingSystemType == VCHP, 
 allow user to select from list: VCHP_IndoorUnitDucted,  VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless
 Else  auto fill from parent CC-PRF;   
 End If
