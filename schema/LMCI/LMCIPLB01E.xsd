@@ -788,6 +788,22 @@ Else If user chooses to override default, allow selection of an equivalent syste
 End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
+                                       <xsd:element name="Hpi02_IceAir_ccHPWH275D_MP" type="hvac:IceAir_ccHPWH275D_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == IceAir_ccHPWH275D_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_IceAir_ccHPWH550D_MP" type="hvac:IceAir_ccHPWH550D_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == IceAir_ccHPWH550D_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                        <xsd:element name="Hpi02_NyleC25A_SP" type="hvac:NyleC25A_SP" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>

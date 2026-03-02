@@ -708,6 +708,30 @@ If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H80 lis
 End If</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
+                                      <xsd:element name="Hpi03_BradfordWhiteAeroThermRE2HP50SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP50SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2HP50 list = BradfordWhiteAeroThermRE2HP50SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="Hpi03_BradfordWhiteAeroThermRE2HP65SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP65SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2HP65 list = BradfordWhiteAeroThermRE2HP65SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="Hpi03_BradfordWhiteAeroThermRE2HP80SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP80SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2HP80 list = BradfordWhiteAeroThermRE2HP80SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
                                       <xsd:element name="Hpi03_BWC202065SimulationGroup" type="hvac:BWC202065SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -1035,7 +1059,8 @@ End If</xsd:documentation>
                               <xsd:element name="Hpi03PrescTier3">
                                 <xsd:annotation>
                                   <xsd:documentation source="FieldText"/>
-                                  <xsd:documentation source="CalculationsAndRules">If prescriptive, In LMCC-PLB-01E If F16b_EquipmentTypeApplies == true then allow user to enter any Tier 3 240V HPWH from the list of all Tier 3 HPWH or from a Tier 3 simulation group; Else If F16c_EquipmentTypeApplies == true then  allow user to enter any Tier 3 Or higher model from the list of all Tier 3 HPWH or from a Tier 3 simulation group.</xsd:documentation>
+                                  <xsd:documentation source="CalculationsAndRules">If prescriptive, In LMCC-PLB-01E If F16b_EquipmentTypeApplies == true then allow user to enter any Tier 3 240V HPWH from the list of all Tier 3 HPWH or from a Tier 3 simulation group; 
+Else If F16c_EquipmentTypeApplies == true then  allow user to enter any Tier 3 Or higher model from the list of all Tier 3 HPWH or list of all Tier 4 HPWH, or from a Tier 3 or 4 simulation group.</xsd:documentation>
                                 </xsd:annotation>
                                 <xsd:complexType>
                                   <xsd:sequence>
@@ -1044,6 +1069,12 @@ End If</xsd:documentation>
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  from all Tier 3 heat pump water heaters in this list</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="Hpi03_HeatPumpWaterHeatersTier4NEEA" type="hvac:HeatPumpWaterHeatersTier4NEEA">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  from all Tier 4 heat pump water heaters in this list</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_AOSmithHPTS50SimulationGroup" type="hvac:AOSmithHPTS50SimulationGroup">
@@ -1055,43 +1086,82 @@ End If</xsd:documentation>
                                       <xsd:element name="Hpi03_AOSmithHPTS66SimulationGroup" type="hvac:AOSmithHPTS66SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive for Tier 3 or higher HPWH user can select  a heat pump water heater from this Tier 3 group: AOSmithHPTS66SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive for Tier 3 or higher HPWH user can select  a heat pump water heater from this Tier 3 or 4 group: AOSmithHPTS66SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_AOSmithHPTS80SimulationGroup" type="hvac:AOSmithHPTS80SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive for Tier 3 or higher HPWH user can select  a heat pump water heater from this Tier 3 group: AOSmithHPTS80SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive for Tier 3 or higher HPWH user can select  a heat pump water heater from this Tier 3 or 4 group: AOSmithHPTS80SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_AOSmithHPTU50SimulationGroup" type="hvac:AOSmithHPTU50SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: AOSmithHPTU50SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: AOSmithHPTU50SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_AOSmithHPTU66SimulationGroup" type="hvac:AOSmithHPTU66SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: AOSmithHPTU66SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: AOSmithHPTU66SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_AOSmithHPTU80SimulationGroup" type="hvac:AOSmithHPTU80SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group:  AOSmithHPTU80SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group:  AOSmithHPTU80SimulationGroup</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2HP50SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP50SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: BradfordWhiteAeroThermRE2HP50SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2HP65SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP65SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: BradfordWhiteAeroThermRE2HP65SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2HP80SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2HP80SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: BradfordWhiteAeroThermRE2HP80SimulationGroup values;
+End If</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_SANCO240SimulationGroup" type="hvac:SANCO240SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: SANCO240SimulationGroup</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_SANCO280SimulationGroup" type="hvac:SANCO280SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: ANCO280SimulationGroup</xsd:documentation>
+                                        </xsd:annotation>
+                                      </xsd:element>
+                                      <xsd:element name="B2hp03_SANCO2120SimulationGroup" type="hvac:SANCO2120SimulationGroup">
+                                        <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: ANCO2120SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_Sanden40SimulationGroup" type="hvac:Sanden40SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: Sanden40SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: Sanden40SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_Sanden80SimulationGroup" type="hvac:Sanden80SimulationGroup">
                                         <xsd:annotation>
                                           <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: Sanden80SimulationGroup</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 or 4 group: Sanden80SimulationGroup</xsd:documentation>
                                         </xsd:annotation>
                                       </xsd:element>
                                       <xsd:element name="Hpi03_GE201450SimulationGroup" type="hvac:GE201450SimulationGroup">
