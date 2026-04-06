@@ -790,6 +790,54 @@ Else If user chooses to override default, allow selection of an equivalent syste
 End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxA10_MP" type="hvac:ColmacCxA10_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxA10_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxA15_MP" type="hvac:ColmacCxA15_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxA15_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxA20_MP" type="hvac:ColmacCxA20_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxA20_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxA25_MP" type="hvac:ColmacCxA25_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxA25_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxA30_MP" type="hvac:ColmacCxA30_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxA30_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_ColmacCxV5_MP" type="hvac:ColmacCxV5_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == ColmacCxV5_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                        <xsd:element name="Hpi02_IceAir_ccHPWH275D_MP" type="hvac:IceAir_ccHPWH275D_MP" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
@@ -894,6 +942,86 @@ user is allowed to override default and select from this simulation group
 End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC60A_MP" type="hvac:NyleC60A_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC60A_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC90A_MP" type="hvac:NyleC90A_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC90A_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC125A_MP" type="hvac:NyleC125A_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC125A_SMP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC185A_MP" type="hvac:NyleC185A_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC185A_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC250A_MP" type="hvac:NyleC250A_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC250A_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC60A_CWP_MP" type="hvac:NyleC60A_CWP_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC60A_CWP_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC90A_CWP_MP" type="hvac:NyleC90A_CWP_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC90A_CWP_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC125A_CWP_MP" type="hvac:NyleC125A_CWP_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC125A_CWP_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC185A_CWP_MP" type="hvac:NyleC185A_CWP_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC185A_CWP_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_NyleC250A_CWP_MP" type="hvac:NyleC250A_CWP_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == NyleC250A_CWP_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                        <xsd:element name="Hpi02_Generic5kW" type="hvac:Generic5kW" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
@@ -938,6 +1066,38 @@ End If</xsd:documentation>
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == Generic45kW
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_RheemHPHD60HNU_MP" type="hvac:RheemHPHD60HNU_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == RheemHPHD60HNU_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_RheemHPHD60VNU_MP" type="hvac:RheemHPHD60VNU_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == RheemHPHD60VNU_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_RheemHPHD135HNU_MP" type="hvac:RheemHPHD135HNU_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == RheemHPHD135HNU_MP
+user is allowed to override default and select from this simulation group 
+End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="Hpi02_RheemHPHD135VNU_MP" type="hvac:RheemHPHD135VNU_MP" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == RheemHPHD135VNU_MP
 user is allowed to override default and select from this simulation group 
 End If</xsd:documentation>
                                           </xsd:annotation>
@@ -1153,7 +1313,7 @@ Else If prescriptive compliance result = RecirculatingDemandControlMF  display t
                                     </xsd:element>
                                     <xsd:element name="D06_VerifyCentralHotWaterDistInsulation" type="comp:VerifyCentralHotWaterDistInsulation" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Insulation Verification </xsd:documentation>
+                                          <xsd:documentation source="FieldText">Verified Pipe Insulation </xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If performance compliance reference value from LMCC-PRF where allowed values are true display term Yes, and false display term No; Else if prescriptive compliance result = true display term Yes </xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
@@ -1234,7 +1394,7 @@ Else If prescriptive compliance result = RecirculatingDemandControlMF  display t
                                     </xsd:element>
                                     <xsd:element name="E06_VerifyCentralHotWaterDistInsulation" type="comp:VerifyCentralHotWaterDistInsulation" >
                                        <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Insulation Verification</xsd:documentation>
+                                          <xsd:documentation source="FieldText">Verified Pipe Insulation</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Reference value from D06</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
@@ -1431,7 +1591,7 @@ Else If prescriptive compliance result = RecirculatingDemandControlMF  display t
          </xsd:element>
          <xsd:element name="Section_J" minOccurs="0">
             <xsd:annotation>
-               <xsd:documentation source="FieldText"> Verified Pipe Insulation for Central System</xsd:documentation>
+               <xsd:documentation source="FieldText"> ECC Verified Pipe Insulation for Central System</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">If at least one row in Section D has D06_VerifyCentralHotWaterDistInsulation == true this section is required. </xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
            </xsd:annotation>
