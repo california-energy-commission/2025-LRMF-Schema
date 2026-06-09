@@ -302,12 +302,20 @@ This  section is required if the parent CC  has any HPWH systems, Require one ro
                                           <xsd:documentation source="CalculationsAndRules">Reference values from parent CC</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="A2hp03_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If parent CC == prescriptive result = Tier3NEEA; Else reference value from performance parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="A2hp03_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If parent CC == prescriptive result = Tier3NEEA; Else reference value from performance parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="A2hp03_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType" fixed="StandardDesignHP50">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Use this choice for non-NEEA HPWH StandardDesignHP50 from performance parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+				    </xsd:choice>
                                     <xsd:element name="A2hp04_WaterHeaterTotalSystemCount" type="hvac:WaterHeaterTotalSystemCount" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText"># of Like (or Identical) Water Heaters in System</xsd:documentation>
@@ -639,6 +647,13 @@ Require one row of data for each  water heater identified in TableHpwhd</xsd:doc
                                                 <xsd:complexType>
                                                    <xsd:sequence>
                                                       <xsd:choice maxOccurs="1">
+                                                         <xsd:element name="B2hp03_AOSmithCAHP120SimulationGroup" type="hvac:AOSmithCAHP120SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  AOSmithCAHP120,  list = AOSmithCAHP120SimulationGroup values</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_AOSmithHPTS40SimulationGroup" type="hvac:AOSmithHPTS40SimulationGroup" >
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
