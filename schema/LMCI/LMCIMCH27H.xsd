@@ -105,20 +105,21 @@ Else If parent is LMCC-MCH allow user to select from list: NewConstruction displ
                         <xsd:documentation source="CalculationsAndRules">Calculated field: default value referenced from MCH-01 A09 BedroomCount; If result = 0, replace with result = 1  Else If information not available then allow user input</xsd:documentation> 
                      </xsd:annotation>
                   </xsd:element>
+		  <xsd:choice maxOccurs="1">
                      <xsd:element name="A06_VentilationSystemType">
                         <xsd:annotation>
                            <xsd:documentation source="FieldText">Ventilation System Type</xsd:documentation>
-                           <xsd:documentation source="CalculationsAndRules">if parent is LMCC-PRF, reference data from LMCC-PRF if available else allow user input;
+                           <xsd:documentation source="CalculationsAndRules">Use this choice If A03_ProjectScopePerformance == AdditionAlteration; if parent is LMCC-PRF, reference data from LMCC-PRF if available else allow user input;
                               else if parent is LMCC-MCH allow user to pick one from list:  
-                              *Supply
-                              *Exhaust;
+                              *Supply; 
+                              *Exhaust
                               *Balanced;
                               *Balanced – ERV;
                               *Balanced – HRV; 
                               *Central Fan Integrated (CFI);
                               *Central Ventilation System – Supply; 
                               *Central Ventilation System – Exhaust; 
-                              **Central Ventilation System – Balancd
+                              *Central Ventilation System – Balanced
                            </xsd:documentation>
                         </xsd:annotation>
                         <xsd:simpleType>
@@ -135,6 +136,27 @@ Else If parent is LMCC-MCH allow user to select from list: NewConstruction displ
                            </xsd:restriction>
                         </xsd:simpleType> 
                      </xsd:element>
+                     <xsd:element name="A06new_VentilationSystemType">
+                        <xsd:annotation>
+                           <xsd:documentation source="FieldText">Ventilation System Type</xsd:documentation>
+                           <xsd:documentation source="CalculationsAndRules">Use this choice If A03_ProjectScopePerformance == NewConstruction Or AdditionOnly;  if parent is LMCC-PRF, reference data from LMCC-PRF if available else allow user input;
+                              else if parent is LMCC-MCH allow user to pick one from list:  User picks one from list of following values: Balanced display term Balanced, BalancedCentralVent display term Central Ventilation System - Balanced, BalancedERV display term Balanced ERV, BalancedHRV display term Balanced HRV, 
+CentralFanIntegrated display term Central Fan Integrated (CFI), ExhaustCentralVent display term Central Ventilation System - Exhaust, SupplyCentralVent display term Central Ventilation System - Supply, SupplyVent display term Supply</xsd:documentation>
+                        </xsd:annotation>
+                        <xsd:simpleType>
+                           <xsd:restriction base="hvac:VentilationSystemType">
+                              <xsd:enumeration value="Balanced"/>
+                              <xsd:enumeration value="BalancedERV"/>
+                              <xsd:enumeration value="BalancedHRV"/>
+                              <xsd:enumeration value="BalancedCentralVent"/>
+                              <xsd:enumeration value="CentralFanIntegrated"/>
+                              <xsd:enumeration value="SupplyCentralVent"/>
+                              <xsd:enumeration value="ExhaustCentralVent"/>
+                              <xsd:enumeration value="SupplyVent"/>
+                           </xsd:restriction>
+                        </xsd:simpleType>
+                     </xsd:element>
+		  </xsd:choice>
                      <xsd:element name="A07_VentilationOperationSchedule" >
                         <xsd:annotation>
                            <xsd:documentation source="FieldText">Ventilation Operation Schedule</xsd:documentation>
