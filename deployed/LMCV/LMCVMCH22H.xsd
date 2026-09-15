@@ -288,7 +288,7 @@ Else If loading Row 2 of CFVCS data Then If parent document == MCH-01a Or MCH-01
       <xsd:element name="Section_D" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation source="FieldText">Forced Air System Fan Efficacy Measurement - All Zonal Control Modes</xsd:documentation>
-          <xsd:documentation source="CalculationsAndRules">If A07_ResidentialCoolingZoneType  == ZoneControlled this section is required. In this section MCH23 refers to the project LMCV-MCH23
+          <xsd:documentation source="CalculationsAndRules">If A06 CondenserSpeedType == SingleSpeed And A07_ResidentialCoolingZoneType  == ZoneControlled this section is required. In this section MCH23 refers to the project LMCV-MCH23
  and MCH-01 refers to the project LMCI-MCH-01</xsd:documentation>
           <xsd:documentation source="MinOccurs">This section is required.</xsd:documentation>
         </xsd:annotation>
