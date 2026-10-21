@@ -284,7 +284,7 @@ End If</xsd:documentation>
                                              <xsd:documentation source="FieldText">Method of Compliance</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If C08_KitchenExhaustOperation == ContinuousOperation
 result = N/A stored in NotApplicableMessage
-Else user selects from list: Airflow, CaptureEfficiency
+Else If C03_KitchenExhaustSystemType == VentedRangeHood user selects from list: Airflow, CaptureEfficiency Else result = Airflow
 End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
@@ -293,7 +293,7 @@ End If</xsd:documentation>
                                              <xsd:documentation source="FieldText">Method of Compliance</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If C08_KitchenExhaustOperation == ContinuousOperation
 result = N/A stored in NotApplicableMessage
-Else user selects from list: Airflow, CaptureEfficiency
+Else If C03_KitchenExhaustSystemType == VentedRangeHood user selects from list: Airflow, CaptureEfficiency Else result = Airflow
 End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
