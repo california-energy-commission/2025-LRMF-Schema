@@ -127,7 +127,7 @@ Else If parent is LMCC-MCH allow user to select from list: NewConstruction displ
                   <xsd:documentation source="FieldText">Ventilation System Type</xsd:documentation>
                   <xsd:documentation source="CalculationsAndRules">Use this choice If A03_ProjectScopePerformance == NewConstruction Or AdditionOnly;  if parent is LMCC-PRF, reference data from LMCC-PRF if available else allow user input;
                               else if parent is LMCC-MCH allow user to pick one from list: Balanced display term Balanced, BalancedCentralVent display term Central Ventilation System - Balanced, BalancedERV display term Balanced ERV, BalancedHRV display term Balanced HRV, 
-CentralFanIntegrated display term Central Fan Integrated (CFI), ExhaustCentralVent display term Central Ventilation System - Exhaust, SupplyCentralVent display term Central Ventilation System - Supply, SupplyVent display term Supply</xsd:documentation>
+CentralFanIntegrated display term Central Fan Integrated (CFI), SupplyCentralVent display term Central Ventilation System - Supply, SupplyVent display term Supply</xsd:documentation>
                 </xsd:annotation>
                 <xsd:simpleType>
                   <xsd:restriction base="hvac:VentilationSystemType">
@@ -137,7 +137,6 @@ CentralFanIntegrated display term Central Fan Integrated (CFI), ExhaustCentralVe
                     <xsd:enumeration value="BalancedCentralVent"/>
                     <xsd:enumeration value="CentralFanIntegrated"/>
                     <xsd:enumeration value="SupplyCentralVent"/>
-                    <xsd:enumeration value="ExhaustCentralVent"/>
                     <xsd:enumeration value="SupplyVent"/>
                   </xsd:restriction>
                 </xsd:simpleType>
@@ -187,7 +186,7 @@ If result = Continuous And A06_VentilationSystemType ==CentralFanIntegrated Disp
             <xsd:element name="B_BeginNote1" minOccurs="0">
               <xsd:annotation>
                 <xsd:documentation source="FieldText">Begin Note 1</xsd:documentation>
-                <xsd:documentation source="AdditionalRequirements">A mechanical supply system, exhaust system or combination thereof shall provide whole-dwelling ventilation with outdoor air each hour at no less than the rate in 160.2(b) 2Aiv</xsd:documentation>
+                <xsd:documentation source="AdditionalRequirements">A mechanical supply system, exhaust system or combination thereof shall provide whole-dwelling ventilation with outdoor air each hour at no less than the rate in 160.2(b) 2Aiv.  Exhaust systems are only allowed when replacing or altering an existing exhaust system.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="B01_MinimumAirflowRateRequired" type="comp:MinimumAirflowRateRequired">
