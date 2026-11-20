@@ -2099,11 +2099,9 @@ This section is required If Section_F has data Or If Section H has data.  Requir
                           <xsd:annotation>
                             <xsd:documentation source="FieldText">MCH-26 <d:line1/>Rated SC System Equipment Verification</xsd:documentation>
                             <xsd:documentation source="CalculationsAndRules">Calculated field:  
-If N01_ResidentialSpaceConditioningSystemName is one of the HP systems listed in H01
+If N01_ResidentialSpaceConditioningSystemName is one of the HP systems listed in H01OR (B03_ResidentialHeatingSystemType Or B04_ResidentialCoolingSystemType) == one of the following split/mini-split AC sstems: 
+DuctedMultiSplitAC, DuctedMiniSplitAC, DuctlessMultiSplitAC, DuctlessSplitAC (for Ductless MiniSplit AC), DuctlessVRF_AC 
 result = true;
- 
-Else If B03_ResidentialHeatingSystemType Or B04_ResidentialCoolingSystemType == DuctedMiniSplitAC, DuctlessMultiSplitAC, DuctlessSplitAC, DuctlessVRF_AC 
-result = false; 
  
 Else If B04_ResidentialCoolingSystemType == SmallDuctHighVelocityAC 
 And C06_EfficiencyMinimumValueSEER Or C06_EfficiencyMinimumValueSEER2 GT 12 
